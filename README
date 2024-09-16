@@ -1,5 +1,14 @@
 # The Legend of Zelda: Spirit Tracks
 
+---
+
+Note: currently this is mostly a "trying out dsd" repo, it will be cleaned up later once everything works.
+Also I want to automate the setup process, i.e running the `dsd rom extract` and `dsd init` commands automatically from running `configure.py`. 
+
+My goal is to provide a working template repository for DS decomps.
+
+---
+
 A work-in-progress decompilation of The Legend of Zelda: Spirit Tracks.
 
 Supported versions:
@@ -51,26 +60,13 @@ To get objdiff to work properly you also need to add the path to the folder cont
 
 1. Clone the repo using `git clone https://github.com/yanis42/st`.
 
-2. Extract the following TGC archive containing the N64 emulator from the disc of the version you want to build:
+2. Get the ARM7 bios and place it inside `orig/arm7/arm7.bin`
 
-  * `mq-j`: `zlj_f.tgc`
-  * `mq-u`: `zlj_f.tgc`
-  * `mq-e`: `zlj_f.tgc`
-  * `ce-j`: `120903_zelda.tgc`
-  * `ce-u`: `zelda_ENG_090903.tgc`
-  * `ce-e`: `zelda_PAL_093003.tgc`
+3. Run `python tools/setup.py`
 
-  Then, extract the DOL file from the TGC archive and place it in the repo as `orig/<version>/main.dol`.
+### TODO: automate this
 
-  You can use [Dolphin](https://dolphin-emu.org) to perform both of these extraction steps:
-  first, right click on the `.iso` file, select "Properties", go to the "Filesystem" tab, find the correct
-  `.tgc` file, then right-click and select "Extract File..." and extract it to your games folder.
-  Then, right-click the extracted `.tgc` file in Dolphin, select "Properties", go to the "Filesystem" tab,
-  right-click the "Disc" and select "Extract System Data..." to extract the DOL file.
-
-3. Run `python3 tools/configure.py` to generate the build. (Note: on Windows you might need to run ``python tools/configure.py``.)
-
-4. Run `ninja` to build the `st-j` version, or run `ninja <version>` to build another version.
+4. Run `dsd.exe rom extract -r orig/VERSION/game.nds -7 orig/arm7/arm7.bin -o test/`
 
 ## Development Tools
 

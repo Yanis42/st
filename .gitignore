@@ -11,3 +11,9 @@ orig/*/*
 !orig/*/.gitkeep
 /*.txt
 ctx.c
+
+# temp
+tools/deps
+tools/mwccarm
+test/
+test2/
