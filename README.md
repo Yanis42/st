@@ -1,7 +1,5 @@
 # The Legend of Zelda: Spirit Tracks
 
----
-
 Note: currently this is mostly a "trying out dsd" repo, it will be cleaned up later once everything works.
 Also I want to automate the setup process, i.e running the `dsd rom extract` and `dsd init` commands automatically from running `configure.py`. 
 
