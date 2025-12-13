@@ -20,3 +20,7 @@ libs/cpp/src/__register_global_object.c:
 
 src/Main/func_02017ea4.cpp:
     .text       start:0x02017e3c end:0x02017ed0
+
+libs/c/wstring.c:
+    complete
+    .text       start:0x0203768c end:0x0203774c
