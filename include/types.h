@@ -13,6 +13,9 @@ typedef int s32;
 typedef short s16;
 typedef char s8;
 
+typedef float f32;
+typedef double f64;
+
 typedef s8 unk8;
 typedef s16 unk16;
 typedef s32 unk32;

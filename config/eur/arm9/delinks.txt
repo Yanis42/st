@@ -21,8 +21,27 @@ libs/cpp/src/__register_global_object.c:
 src/Main/func_02017ea4.cpp:
     .text       start:0x02017ea4 end:0x02017f38
 
+libs/c/locale.c:
+    .data       start:0x02044790 end:0x020449ac
+
+libs/c/math_api.c:
+    complete
+    .text       start:0x02033b14 end:0x02033ba0
+
+libs/c/mbstring.c:
+    complete
+    .text       start:0x02033ba0 end:0x02033c90
+
+libs/c/mem.c:
+    complete
+    .text       start:0x02033c90 end:0x02033d7c
+
+libs/c/mem_funcs.c:
+    complete
+    .text       start:0x02033d7c end:0x02033e28
+
 libs/c/code_02033ba0.c:
-    .text       start:0x02033ba0 end:0x0203615c
+    .text       start:0x02033e28 end:0x0203615c
 
 libs/c/wstring.c:
     complete

@@ -1,0 +1,39 @@
+#ifndef _C_MATH_H
+#define _C_MATH_H
+
+#include <types.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define DONT_INLINE_SQRT
+
+#define M_PI 3.1415926535897932
+#define M_SQRT3 1.7320499420166016
+
+extern int __float_nan[];
+extern int __float_huge[];
+extern int __double_huge[];
+
+#define NAN (*(f32 *) __float_nan)
+#define INFINITY (*(f32 *) __float_huge)
+#define HUGE_VAL (*(double *) __double_huge)
+
+// f64 bit-twiddling macros
+#define __HI(x) (((s32 *) &x)[1]) //! TODO: real?
+#define __LO(x) (((s32 *) &x)[0])
+
+#define FP_NAN 1
+#define FP_INFINITE 2
+#define FP_ZERO 3
+#define FP_NORMAL 4
+#define FP_SUBNORMAL 5
+
+int __fpclassifyd(f64 x);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
