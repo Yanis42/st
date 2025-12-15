@@ -21,6 +21,19 @@ libs/cpp/src/__register_global_object.c:
 src/Main/func_02017ea4.cpp:
     .text       start:0x02017e3c end:0x02017ed0
 
+libs/c/abort_exit_arm_eabi.c:
+    .text       start:0x02034c18 end:0x02034da0
+
+libs/c/ansi_files.c:
+    .text       start:0x02034da0 end:0x02034e04
+
+libs/c/arith.c:
+    complete
+    .text       start:0x02034e04 end:0x02034e1c
+
+libs/c/buffer_io.c:
+    .text       start:0x02034e1c end:0x02034ecc
+
 libs/c/math_api.c:
     complete
     .text       start:0x02035044 end:0x020350d0
@@ -36,6 +49,20 @@ libs/c/mem.c:
 libs/c/mem_funcs.c:
     complete
     .text       start:0x020352ac end:0x02035358
+
+libs/c/signal.c:
+    .text       start:0x02035384 end:0x020354ac
+
+libs/c/string.c:
+    complete
+    .text       start:0x020354ac end:0x02035728
+
+libs/c/wmem.c:
+    complete
+    .text       start:0x02035728 end:0x02035760
+
+libs/c/wprintf.c:
+    .text       start:0x02035760 end:0x0203768c
 
 libs/c/wstring.c:
     complete

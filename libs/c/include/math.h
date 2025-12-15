@@ -21,8 +21,13 @@ extern int __double_huge[];
 #define HUGE_VAL (*(double *) __double_huge)
 
 // f64 bit-twiddling macros
-#define __HI(x) (((s32 *) &x)[1]) //! TODO: real?
-#define __LO(x) (((s32 *) &x)[0])
+#ifdef __BIG_ENDIAN__
+    #define __HI(x) (((s32 *) &x)[0])
+    #define __LO(x) (((s32 *) &x)[1])
+#else
+    #define __HI(x) (((s32 *) &x)[1])
+    #define __LO(x) (((s32 *) &x)[0])
+#endif
 
 #define FP_NAN 1
 #define FP_INFINITE 2
@@ -31,6 +36,12 @@ extern int __double_huge[];
 #define FP_SUBNORMAL 5
 
 int __fpclassifyd(f64 x);
+double fabs(double x);
+double nan(const char *x);
+
+static inline long double fabsl(long double x) {
+    return (long double) fabs((double) x);
+}
 
 #ifdef __cplusplus
 }

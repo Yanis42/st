@@ -21,7 +21,6 @@ typedef s16 unk16;
 typedef s32 unk32;
 
 #ifndef __cplusplus
-typedef unsigned short wchar_t;
 typedef s32 bool;
     #define true 1
     #define false 0

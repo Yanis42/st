@@ -5055,7 +5055,7 @@ from:0x02033e7c kind:arm_call to:0x020274f8 module:main
 from:0x02033edc kind:arm_call to:0x020273e0 module:main
 from:0x02033f28 kind:arm_call to:0x02027460 module:main
 from:0x02033f54 kind:arm_call to:0x02033710 module:main
-from:0x02033f68 kind:load to:0x02051770 module:main
+from:0x02033f68 kind:load to:0x020516c8 add:0xa8 module:main
 from:0x02033f6c kind:load to:0x027e0860 module:dtcm
 from:0x02033f70 kind:load to:0x02051680 module:main
 from:0x02033f74 kind:load to:0x020516a4 module:main

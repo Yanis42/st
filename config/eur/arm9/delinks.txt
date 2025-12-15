@@ -24,6 +24,27 @@ src/Main/func_02017ea4.cpp:
 libs/c/locale.c:
     .data       start:0x02044790 end:0x020449ac
 
+libs/c/abort_exit_arm_eabi.c:
+    complete
+    .bss       start:0x02051570 end:0x02051680
+    .text       start:0x020336e8 end:0x02033870
+
+libs/c/ansi_files.c:
+    .data       start:0x020446a8 end:0x0204478c
+    .bss       start:0x020517a0 end:0x02051aa0
+    .text       start:0x02033870 end:0x020338d4
+
+libs/c/arith.c:
+    complete
+    .text       start:0x020338d4 end:0x020338ec
+
+libs/c/buffer_io.c:
+    complete
+    .text       start:0x020338ec end:0x0203399c
+
+libs/c/file_io.c:
+    .text       start:0x0203399c end:0x02033b14
+
 libs/c/math_api.c:
     complete
     .text       start:0x02033b14 end:0x02033ba0
@@ -40,8 +61,24 @@ libs/c/mem_funcs.c:
     complete
     .text       start:0x02033d7c end:0x02033e28
 
-libs/c/code_02033ba0.c:
-    .text       start:0x02033e28 end:0x0203615c
+libs/c/code_02033e28.c:
+    .text       start:0x02033e28 end:0x02033e54
+
+libs/c/signal.c:
+    complete
+    .text       start:0x02033e54 end:0x02033f7c
+    .bss        start:0x02051aa8 end:0x02051ac4
+
+libs/c/string.c:
+    complete
+    .text       start:0x02033f7c end:0x020341f8
+
+libs/c/wmem.c:
+    complete
+    .text       start:0x020341f8 end:0x02034230
+
+libs/c/wprintf.c:
+    .text       start:0x02034230 end:0x0203615c
 
 libs/c/wstring.c:
     complete
