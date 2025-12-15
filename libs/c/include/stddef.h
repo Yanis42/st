@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #ifndef NULL
-    #define NULL (void *) 0
+    #define NULL 0
 #endif
 
 #ifndef nullptr

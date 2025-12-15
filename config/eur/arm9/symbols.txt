@@ -2866,9 +2866,9 @@ data_02051148 kind:bss addr:0x02051148
 data_0205114c kind:bss addr:0x0205114c
 __console_exit kind:bss addr:0x02051570
 __stdio_exit kind:bss addr:0x02051574
-__atexit_curr_func kind:bss addr:0x02051578
+__atexit_curr_func kind:bss addr:0x02051578 local
 __aborting kind:bss addr:0x0205157c
-__atexit_funcs kind:bss addr:0x02051580
+__atexit_funcs kind:bss addr:0x02051580 local
 __cs_id kind:bss addr:0x02051680
 __cs_ref kind:bss addr:0x020516a4
 __cs kind:bss addr:0x020516c8
