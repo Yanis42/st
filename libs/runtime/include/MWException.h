@@ -1,8 +1,6 @@
 #ifndef _RUNTIME_MWEXCEPTION_H
 #define _RUNTIME_MWEXCEPTION_H
 
-//! TODO: move this file outside of the libc include folder
-
 #include <types.h>
 
 typedef void (*DestructorFunc)(void *);
