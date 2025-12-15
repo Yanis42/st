@@ -22,9 +22,13 @@ src/Main/func_02017ea4.cpp:
     .text       start:0x02017e3c end:0x02017ed0
 
 libs/c/src/abort_exit_arm_eabi.c:
+    complete
     .text       start:0x02034c18 end:0x02034da0
+    .bss        start:0x02052af0 end:0x02052c00
 
 libs/c/src/ansi_files.c:
+    .bss        start:0x02052d20 end:0x02053020
+    .data       start:0x02045c1c end:0x02045d00
     .text       start:0x02034da0 end:0x02034e04
 
 libs/c/src/arith.c:
@@ -32,6 +36,7 @@ libs/c/src/arith.c:
     .text       start:0x02034e04 end:0x02034e1c
 
 libs/c/src/buffer_io.c:
+    complete
     .text       start:0x02034e1c end:0x02034ecc
 
 libs/c/src/math_api.c:
@@ -51,6 +56,8 @@ libs/c/src/mem_funcs.c:
     .text       start:0x020352ac end:0x02035358
 
 libs/c/src/signal.c:
+    complete
+    .bss        start:0x02053028 end:0x02053044
     .text       start:0x02035384 end:0x020354ac
 
 libs/c/src/string.c:
@@ -69,6 +76,7 @@ libs/c/src/wstring.c:
     .text       start:0x0203768c end:0x0203774c
 
 libs/c/src/ansi_fp.c:
+    .data       start:0x02045fa0 end:0x02046074
     .text       start:0x0203774c end:0x020380d4
 
 libs/c/src/extras.c:
@@ -76,12 +84,18 @@ libs/c/src/extras.c:
     .text       start:0x020380d4 end:0x02038100
 
 libs/c/src/math/e_log.c:
+    complete
+    .bss        start:0x02053044 end:0x0205304c
     .text       start:0x02038100 end:0x02038830
 
 libs/c/src/math/e_log10.c:
+    complete
+    .bss        start:0x0205304c end:0x02053054
     .text       start:0x02038830 end:0x02038a08
 
 libs/c/src/math/e_pow.c:
+    complete
+    .rodata     start:0x020446d4 end:0x02044704
     .text       start:0x02038a08 end:0x02039b90
 
 libs/c/src/math/s_ceil.c:

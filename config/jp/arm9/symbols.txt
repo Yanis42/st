@@ -2091,7 +2091,7 @@ _ffix kind:function(arm,size=0x34) addr:0x0203badc
 _ffixu kind:function(arm,size=0x40) addr:0x0203bb10
 func_0203bb50 kind:function(arm,size=0x4c) addr:0x0203bb50
 _ll_ufrom_d kind:function(arm,size=0x8c) addr:0x0203bb9c
-func_0203bc28 kind:function(arm,size=0x19c) addr:0x0203bc28
+sqrt kind:function(arm,size=0x19c) addr:0x0203bc28
 func_0203bdc4 kind:function(arm,size=0xe4) addr:0x0203bdc4
 _fmul kind:function(arm,size=0x1e0) addr:0x0203bea8
 func_0203c088 kind:function(arm,size=0x21c) addr:0x0203c088
@@ -2316,10 +2316,10 @@ data_02044248 kind:data(any) addr:0x02044248
 data_0204451c kind:data(any) addr:0x0204451c
 data_02044540 kind:data(any) addr:0x02044540
 data_02044580 kind:data(any) addr:0x02044580
-data_020445d4 kind:data(any) addr:0x020445d4
-data_020446d4 kind:data(any) addr:0x020446d4
-data_020446e4 kind:data(any) addr:0x020446e4
-data_020446f4 kind:data(any) addr:0x020446f4
+__ctype_mapC kind:data(any) addr:0x020445d4
+dp_h kind:data(any) addr:0x020446d4 local
+bp kind:data(any) addr:0x020446e4 local
+dp_l kind:data(any) addr:0x020446f4 local
 data_02044704 kind:data(any) addr:0x02044704
 .p__sinit_0203ed54 kind:data(word) addr:0x0204470c
 .p__sinit_0203ed70 kind:data(word) addr:0x02044710
@@ -2613,8 +2613,8 @@ data_02045ba0 kind:data(any) addr:0x02045ba0
 data_02045be4 kind:data(any) addr:0x02045be4
 data_02045be8 kind:data(any) addr:0x02045be8
 data_02045c18 kind:data(any) addr:0x02045c18
-data_02045c1c kind:data(any) addr:0x02045c1c
-data_02045d00 kind:data(any) addr:0x02045d00
+__files kind:data(any) addr:0x02045c1c
+__float_nan kind:data(any) addr:0x02045d00
 data_02045d04 kind:data(any) addr:0x02045d04
 data_02045d08 kind:data(any) addr:0x02045d08
 data_02045d0c kind:data(any) addr:0x02045d0c
@@ -2622,7 +2622,7 @@ data_02045d14 kind:data(any) addr:0x02045d14
 data_02045d1c kind:data(any) addr:0x02045d1c
 data_02045d2c kind:data(any) addr:0x02045d2c
 data_02045d4c kind:data(any) addr:0x02045d4c
-data_02045d58 kind:data(any) addr:0x02045d58
+_current_locale kind:data(any) addr:0x02045d58
 data_02045d64 kind:data(any) addr:0x02045d64
 data_02045d70 kind:data(any) addr:0x02045d70
 data_02045d80 kind:data(any) addr:0x02045d80
@@ -2642,27 +2642,27 @@ data_02045f88 kind:data(any) addr:0x02045f88
 data_02045f90 kind:data(any) addr:0x02045f90
 data_02045f98 kind:data(any) addr:0x02045f98
 data_02045f9c kind:data(any) addr:0x02045f9c
-data_02045fa0 kind:data(any) addr:0x02045fa0
-data_02045fd0 kind:data(any) addr:0x02045fd0
-data_02045ff8 kind:data(any) addr:0x02045ff8
-data_02046010 kind:data(any) addr:0x02046010
-data_02046020 kind:data(any) addr:0x02046020
-data_02046028 kind:data(any) addr:0x02046028
-data_02046030 kind:data(any) addr:0x02046030
-data_02046038 kind:data(any) addr:0x02046038
-data_02046040 kind:data(any) addr:0x02046040
-data_02046044 kind:data(any) addr:0x02046044
-data_02046048 kind:data(any) addr:0x02046048
-data_0204604c kind:data(any) addr:0x0204604c
-data_02046050 kind:data(any) addr:0x02046050
-data_02046054 kind:data(any) addr:0x02046054
-data_02046058 kind:data(any) addr:0x02046058
-data_0204605c kind:data(any) addr:0x0204605c
-data_02046060 kind:data(any) addr:0x02046060
-data_02046064 kind:data(any) addr:0x02046064
-data_02046068 kind:data(any) addr:0x02046068
-data_0204606c kind:data(any) addr:0x0204606c
-data_02046070 kind:data(any) addr:0x02046070
+@311 kind:data(any) addr:0x02045fa0 local
+@312 kind:data(any) addr:0x02045fd0 local
+@313 kind:data(any) addr:0x02045ff8 local
+@314 kind:data(any) addr:0x02046010 local
+@315 kind:data(any) addr:0x02046020 local
+@316 kind:data(any) addr:0x02046028 local
+@317 kind:data(any) addr:0x02046030 local
+@318 kind:data(any) addr:0x02046038 local
+@319 kind:data(any) addr:0x02046040 local
+@320 kind:data(any) addr:0x02046044 local
+@321 kind:data(any) addr:0x02046048 local
+@322 kind:data(any) addr:0x0204604c local
+@323 kind:data(any) addr:0x02046050 local
+@324 kind:data(any) addr:0x02046054 local
+@325 kind:data(any) addr:0x02046058 local
+@326 kind:data(any) addr:0x0204605c local
+@327 kind:data(any) addr:0x02046060 local
+@328 kind:data(any) addr:0x02046064 local
+@329 kind:data(any) addr:0x02046068 local
+@330 kind:data(any) addr:0x0204606c local
+@331 kind:data(any) addr:0x02046070 local
 data_02046074 kind:data(any) addr:0x02046074
 data_0204607c kind:data(any) addr:0x0204607c
 data_02046084 kind:data(any) addr:0x02046084
@@ -2885,18 +2885,20 @@ data_02052524 kind:bss addr:0x02052524
 data_020525e0 kind:bss addr:0x020525e0
 data_020526c8 kind:bss addr:0x020526c8
 data_020526cc kind:bss addr:0x020526cc
-data_02052af0 kind:bss addr:0x02052af0
-data_02052b00 kind:bss addr:0x02052b00
-data_02052c00 kind:bss addr:0x02052c00
-data_02052c24 kind:bss addr:0x02052c24
-data_02052c48 kind:bss addr:0x02052c48
-data_02052cf0 kind:bss addr:0x02052cf0
-data_02052d20 kind:bss addr:0x02052d20
-data_02052e20 kind:bss addr:0x02052e20
-data_02052f20 kind:bss addr:0x02052f20
-data_02053020 kind:bss addr:0x02053020
+__console_exit kind:bss addr:0x02052af0
+__stdio_exit kind:bss addr:0x02052af4
+__atexit_curr_func kind:bss addr:0x02052af8 local
+__aborting kind:bss addr:0x02052afc
+__atexit_funcs kind:bss addr:0x02052b00 local
+__cs_id kind:bss addr:0x02052c00
+__cs_ref kind:bss addr:0x02052c24
+__cs kind:bss addr:0x02052c48
+stderr_buff kind:bss addr:0x02052d20
+stdout_buff kind:bss addr:0x02052e20
+stdin_buff kind:bss addr:0x02052f20
+errno kind:bss addr:0x02053020
 data_02053024 kind:bss addr:0x02053024
-data_02053028 kind:bss addr:0x02053028
-data_02053044 kind:bss addr:0x02053044
-data_0205304c kind:bss addr:0x0205304c
+signal_funcs kind:bss addr:0x02053028
+zero kind:bss addr:0x02053044 local
+zero kind:bss addr:0x0205304c local
 __global_destructor_chain kind:bss(size=0x4) addr:0x02053054
