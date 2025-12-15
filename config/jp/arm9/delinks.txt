@@ -67,3 +67,51 @@ libs/c/src/wprintf.c:
 libs/c/src/wstring.c:
     complete
     .text       start:0x0203768c end:0x0203774c
+
+libs/c/src/ansi_fp.c:
+    .text       start:0x0203774c end:0x020380d4
+
+libs/c/src/extras.c:
+    complete
+    .text       start:0x020380d4 end:0x02038100
+
+libs/c/src/math/e_log.c:
+    .text       start:0x02038100 end:0x02038830
+
+libs/c/src/math/e_log10.c:
+    .text       start:0x02038830 end:0x02038a08
+
+libs/c/src/math/e_pow.c:
+    .text       start:0x02038a08 end:0x02039b90
+
+libs/c/src/math/s_ceil.c:
+    complete
+    .text       start:0x02039b90 end:0x02039d50
+
+libs/c/src/math/s_copysign.c:
+    complete
+    .text       start:0x02039d50 end:0x02039d78
+
+libs/c/src/math/s_fabs.c:
+    complete
+    .text       start:0x02039d78 end:0x02039d98
+
+libs/c/src/math/s_frexp.c:
+    complete
+    .text       start:0x02039d98 end:0x02039e58
+
+libs/c/src/math/s_ldexp.c:
+    complete
+    .text       start:0x02039e58 end:0x0203a0b8
+
+libs/c/src/math/w_log.c:
+    complete
+    .text       start:0x0203a0b8 end:0x0203a0c4
+
+libs/c/src/math/w_log10f.c:
+    complete
+    .text       start:0x0203a0c4 end:0x0203a0d0
+
+libs/c/src/math/w_pow.c:
+    complete
+    .text       start:0x0203a0d0 end:0x0203a0dc

@@ -1,6 +1,8 @@
 #ifndef _C_MATH_H
 #define _C_MATH_H
 
+#include <errno.h>
+#include <fdlibm.h>
 #include <types.h>
 
 #ifdef __cplusplus
@@ -36,8 +38,16 @@ extern int __double_huge[];
 #define FP_SUBNORMAL 5
 
 int __fpclassifyd(f64 x);
+int __signbitd(double x);
 double fabs(double x);
 double nan(const char *x);
+double sqrt(double __x);
+
+#define fpclassify(x) __fpclassifyd(x)
+#define isnormal(x) (fpclassify(x) == FP_NORMAL)
+#define isnan(x) (fpclassify(x) == FP_NAN)
+#define isinf(x) (fpclassify(x) == FP_INFINITE)
+#define isfinite(x) (fpclassify(x) > FP_INFINITE)
 
 static inline long double fabsl(long double x) {
     return (long double) fabs((double) x);
