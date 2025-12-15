@@ -54,6 +54,7 @@ libs/c/mbstring.c:
     .text       start:0x02033ba0 end:0x02033c90
 
 libs/c/mem.c:
+    complete
     .text       start:0x02033c90 end:0x02033d7c
 
 libs/c/mem_funcs.c:
@@ -69,6 +70,7 @@ libs/c/signal.c:
     .bss        start:0x02051aa8 end:0x02051ac4
 
 libs/c/string.c:
+    complete
     .text       start:0x02033f7c end:0x020341f8
 
 libs/c/wmem.c:

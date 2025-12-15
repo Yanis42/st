@@ -10,7 +10,7 @@ size_t strlen(const char *str) {
 
     do {
         length++;
-    } while (*++p);
+    } while (*p++);
 
     return length;
 }
@@ -186,7 +186,7 @@ int strncmp(char *str1, char *str2, size_t n) {
     n++;
 
     while (--n) {
-        if ((c1 = *++p1) != (c2 = *++p2)) {
+        if ((c1 = *p1++) != (c2 = *p2++)) {
             return (c1 - c2);
         } else if (!c1) {
             break;

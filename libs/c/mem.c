@@ -19,7 +19,7 @@ void *memmove(void *dst, const void *src, size_t len) {
 
     if (!reverse) {
         for (csrc = (const char *) src, cdst = (char *) dst, len++; --len;) {
-            *++cdst = *++csrc;
+            *cdst++ = *csrc++;
         }
     } else {
         for (csrc = (const char *) src + len, cdst = (char *) dst + len, len++; --len;) {
