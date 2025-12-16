@@ -10,7 +10,7 @@ size_t wcslen(const wchar_t *str) {
     return len;
 }
 
-wchar_t *wcscpy(wchar_t *dest, const wchar_t *src, size_t n) {
+wchar_t *wcscpy(wchar_t *dest, const wchar_t *src) {
     const wchar_t *p = src;
     wchar_t *q       = dest;
 

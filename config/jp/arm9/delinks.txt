@@ -55,6 +55,11 @@ libs/c/src/mem_funcs.c:
     complete
     .text       start:0x020352ac end:0x02035358
 
+libs/c/src/secure_error.c:
+    complete
+    .bss        start:0x02053024 end:0x02053028
+    .text       start:0x02035358 end:0x02035384
+
 libs/c/src/signal.c:
     complete
     .bss        start:0x02053028 end:0x02053044

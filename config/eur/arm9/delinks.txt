@@ -61,7 +61,9 @@ libs/c/src/mem_funcs.c:
     complete
     .text       start:0x02033d7c end:0x02033e28
 
-libs/c/src/code_02033e28.c:
+libs/c/src/secure_error.c:
+    complete
+    .bss       start:0x02051aa4 end:0x02051aa8
     .text       start:0x02033e28 end:0x02033e54
 
 libs/c/src/signal.c:
@@ -78,6 +80,7 @@ libs/c/src/wmem.c:
     .text       start:0x020341f8 end:0x02034230
 
 libs/c/src/wprintf.c:
+    .data       start:0x020449ac end:0x02044a2c
     .text       start:0x02034230 end:0x0203615c
 
 libs/c/src/wstring.c:
@@ -138,6 +141,3 @@ libs/c/src/math/w_log10f.c:
 libs/c/src/math/w_pow.c:
     complete
     .text       start:0x02038ba0 end:0x02038bac
-
-libs/c/src/code_02038bac.c:
-    .text       start:0x02038bac end:0x02038dc0

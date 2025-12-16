@@ -1998,8 +1998,8 @@ memset kind:function(arm,size=0x14) addr:0x0203522c
 memchr kind:function(arm,size=0x2c) addr:0x02035240
 memcmp kind:function(arm,size=0x40) addr:0x0203526c
 __fill_mem kind:function(arm,size=0xac) addr:0x020352ac
-func_02035358 kind:function(arm,size=0x28) addr:0x02035358
-func_02035380 kind:function(arm,size=0x4) addr:0x02035380
+__msl_runtime_constraint_violation_s kind:function(arm,size=0x28) addr:0x02035358
+secure_error_func_02033e50 kind:function(arm,size=0x4) addr:0x02035380
 raise kind:function(arm,size=0x128) addr:0x02035384
 strlen kind:function(arm,size=0x1c) addr:0x020354ac
 strcpy kind:function(arm,size=0xc8) addr:0x020354c8
@@ -2897,7 +2897,7 @@ stderr_buff kind:bss addr:0x02052d20
 stdout_buff kind:bss addr:0x02052e20
 stdin_buff kind:bss addr:0x02052f20
 errno kind:bss addr:0x02053020
-data_02053024 kind:bss addr:0x02053024
+__msl_constraint_handler kind:bss addr:0x02053024
 signal_funcs kind:bss addr:0x02053028
 zero kind:bss addr:0x02053044 local
 zero kind:bss addr:0x0205304c local

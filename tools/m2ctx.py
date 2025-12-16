@@ -21,8 +21,8 @@ CXX_FLAGS = [
     '-nostdinc',
     '-Iinclude',
     '-Ilibs/c/include',
-    '-Ilibs/cpp/include'
-    '-Ilibs/runtime/include'
+    '-Ilibs/cpp/include',
+    '-Ilibs/runtime/include',
 ]
 
 script_dir = Path(os.path.dirname(os.path.realpath(__file__)))

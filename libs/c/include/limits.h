@@ -9,13 +9,8 @@ extern "C" {
 #define SCHAR_MAX 0x7F
 #define UCHAR_MAX 0xFFU
 
-#if defined(__MWERKS__) && __option(unsigned_char)
-    #define CHAR_MIN 0U
-    #define CHAR_MAX UCHAR_MAX
-#else
-    #define CHAR_MIN SCHAR_MIN
-    #define CHAR_MAX SCHAR_MAX
-#endif
+#define CHAR_MIN SCHAR_MIN
+#define CHAR_MAX SCHAR_MAX
 
 #define SHRT_MIN (-0x7FFF - 1)
 #define SHRT_MAX 0x7FFF
