@@ -2,7 +2,6 @@
 #define _C_CTYPE_H
 
 #include <locale.h>
-#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {

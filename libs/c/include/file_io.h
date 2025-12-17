@@ -1,12 +1,11 @@
 #ifndef _C_FILE_IO_H
 #define _C_FILE_IO_H
 
+#include <stdio.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <stdio.h>
-#include <types.h>
 
 int fclose(FILE *file);
 int fflush(FILE *file);

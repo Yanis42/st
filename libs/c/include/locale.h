@@ -1,22 +1,20 @@
 #ifndef _C_LOCALE_H
 #define _C_LOCALE_H
 
-#include <types.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 #define _COMPONENT_NAME_LEN 8
 
-typedef s32 (*__decode_mbyte)(u16 *, const char *, s32);
-typedef s32 (*__encode_mbyte)(char *, u16);
+typedef int (*__decode_mbyte)(unsigned short *, const char *, int);
+typedef int (*__encode_mbyte)(char *, unsigned short);
 
 struct _loc_coll_cmpt {
-    s32 char_start_value;
-    s32 char_coll_tab_size;
-    s16 char_spec_accents;
-    u16 *char_coll_table_ptr;
+    int char_start_value;
+    int char_coll_tab_size;
+    short char_spec_accents;
+    unsigned short *char_coll_table_ptr;
 };
 
 struct _loc_ctype_cmpt {

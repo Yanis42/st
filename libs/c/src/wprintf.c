@@ -7,7 +7,7 @@
 #include <secure_error.h>
 #include <stdarg.h>
 #include <string.h>
-#include <types.h>
+
 #include <wstring.h>
 
 #pragma exceptions on
@@ -68,11 +68,11 @@ enum argument_options {
 };
 
 typedef struct {
-    u8 justification_options;
-    u8 sign_options;
-    u8 precision_specified;
-    u8 alternate_form;
-    u8 argument_options;
+    unsigned char justification_options;
+    unsigned char sign_options;
+    unsigned char precision_specified;
+    unsigned char alternate_form;
+    unsigned char argument_options;
     wchar_t conversion_char;
     int field_width;
     int precision;

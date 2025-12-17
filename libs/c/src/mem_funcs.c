@@ -1,18 +1,18 @@
 #include <mem_funcs.h>
 
-#define cps ((u8 *) src)
-#define cpd ((u8 *) dst)
-#define lps ((u32 *) src)
-#define lpd ((u32 *) dst)
+#define cps ((unsigned char *) src)
+#define cpd ((unsigned char *) dst)
+#define lps ((unsigned int *) src)
+#define lpd ((unsigned int *) dst)
 
 #define deref_auto_inc(p) *(p)++
 
-void __fill_mem(void *dst, s32 val, u32 n) {
-    u32 v = (u8) val;
-    u32 i;
+void __fill_mem(void *dst, int val, unsigned int n) {
+    unsigned int v = (unsigned char) val;
+    unsigned int i;
 
     if (n >= 32) {
-        i = (-(u32) dst) & 3;
+        i = (-(unsigned int) dst) & 3;
 
         if (i) {
             n -= i;

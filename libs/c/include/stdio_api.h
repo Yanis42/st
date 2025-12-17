@@ -2,7 +2,7 @@
 #define _C_STDIO_API_H
 
 #include <file_struc.h>
-#include <types.h>
+#include <stddef.h>
 #include <wchar_io.h>
 
 #ifdef __cplusplus
@@ -45,7 +45,6 @@ typedef struct {
 
 size_t __fwrite(const void *pPtr, size_t memb_size, size_t num_memb, FILE *file);
 int __StringRead(void *, int, int);
-wint_t __wStringRead(void *, wint_t, int);
 
 #ifdef __cplusplus
 }

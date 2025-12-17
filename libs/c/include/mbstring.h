@@ -1,15 +1,15 @@
 #ifndef _C_MBSTRING_H
 #define _C_MBSTRING_H
 
-#include <types.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-s32 mbtowc(s16 *pwc, const char *s, s32 n);
-s32 __mbtowc_noconv(u16 *pwc, const char *str, s32 n);
-s32 __wctomb_noconv(char *s, u16 wchar);
+int mbtowc(wchar_t *pwc, const char *s, int n);
+int __mbtowc_noconv(wchar_t *pwc, const char *str, int n);
+int __wctomb_noconv(char *s, wchar_t wchar);
 size_t mbstowcs(wchar_t *pDest, const char *pSrc, size_t num);
 
 #ifdef __cplusplus

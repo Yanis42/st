@@ -1,7 +1,7 @@
 #ifndef _C_WSTRING_H
 #define _C_WSTRING_H
 
-#include <types.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {

@@ -3,7 +3,6 @@
 #include <critical_regions.h>
 #include <file_io.h>
 #include <signal.h>
-#include <types.h>
 
 extern void _ExitProcess(void);
 

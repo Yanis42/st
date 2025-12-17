@@ -1,13 +1,14 @@
 #include <locale.h>
+#include <stddef.h>
 
 char *strncpy(char *dest, const char *src, size_t n);
 size_t strlen(const char *str);
 
-s32 mbtowc(s16 *pwc, const char *s, s32 n) {
+int mbtowc(short *pwc, const char *s, int n) {
     return _current_locale.ctype_cmpt_ptr->decode_mb(pwc, s, n);
 }
 
-s32 __mbtowc_noconv(u16 *pwc, const char *str, s32 n) {
+int __mbtowc_noconv(unsigned short *pwc, const char *str, int n) {
     const unsigned char *s = (const unsigned char *) str;
 
     if (s == NULL) {
@@ -19,7 +20,7 @@ s32 __mbtowc_noconv(u16 *pwc, const char *str, s32 n) {
     }
 
     if (pwc != NULL) {
-        *pwc = (u8) *s;
+        *pwc = (unsigned char) *s;
     }
 
     if (*s == 0) {
@@ -29,7 +30,7 @@ s32 __mbtowc_noconv(u16 *pwc, const char *str, s32 n) {
     return 1;
 }
 
-s32 __wctomb_noconv(char *s, u16 wchar) {
+int __wctomb_noconv(char *s, unsigned short wchar) {
     if (s == NULL) {
         return 0;
     }

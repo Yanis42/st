@@ -1,5 +1,4 @@
 #include <mem.h>
-#include <types.h>
 
 wchar_t *wmemcpy(wchar_t *pDest, const wchar_t *pSrc, size_t num) {
     return (wchar_t *) memcpy(pDest, pSrc, num * sizeof(wchar_t));

@@ -110,9 +110,9 @@ double x, y;
 {
     double z, ax, z_h, z_l, p_h, p_l;
     double y1, t1, t2, r, s, t, u, v, w;
-    s32 i, j, k, yisint, n;
-    s32 hx, hy, ix, iy;
-    u32 lx, ly;
+    int i, j, k, yisint, n;
+    int hx, hy, ix, iy;
+    unsigned int lx, ly;
 
     hx = __HI(x);
     lx = __LO(x);

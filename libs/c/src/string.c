@@ -1,12 +1,12 @@
+#include <stddef.h>
 #include <string.h>
-#include <types.h>
 
 #define K1 0x80808080
 #define K2 0xFEFEFEFF
 
 size_t strlen(const char *str) {
-    int length = -1;
-    u8 *p      = (u8 *) str;
+    int length       = -1;
+    unsigned char *p = (unsigned char *) str;
 
     do {
         length++;
@@ -16,14 +16,14 @@ size_t strlen(const char *str) {
 }
 
 char *strcpy(char *dest, const char *src) {
-    register u8 *destb, *fromb;
-    register u32 w, t, align;
-    register u32 k1, k2;
+    register unsigned char *destb, *fromb;
+    register unsigned int w, t, align;
+    register unsigned int k1, k2;
 
-    fromb = (u8 *) src;
-    destb = (u8 *) dest;
+    fromb = (unsigned char *) src;
+    destb = (unsigned char *) dest;
 
-    if ((align = ((u32) fromb & 3)) != ((u32) destb & 3)) {
+    if ((align = ((unsigned int) fromb & 3)) != ((unsigned int) destb & 3)) {
         goto bytecopy;
     }
 
@@ -44,7 +44,7 @@ char *strcpy(char *dest, const char *src) {
     k1 = K1;
     k2 = K2;
 
-    w = *((s32 *) fromb);
+    w = *((int *) fromb);
     t = w + k2;
     t &= ~w;
     t &= k1;
@@ -53,11 +53,11 @@ char *strcpy(char *dest, const char *src) {
         goto bytecopy;
     }
 
-    --((s32 *) (destb));
+    --((int *) (destb));
 
     do {
-        *(++((s32 *) destb)) = w;
-        w                    = *(++((s32 *) fromb));
+        *(++((int *) destb)) = w;
+        w                    = *(++((int *) fromb));
         t                    = w + k2;
         t &= ~w;
         t &= k1;
@@ -67,7 +67,7 @@ char *strcpy(char *dest, const char *src) {
     } while (true);
 
 adjust:
-    ++((s32 *) destb);
+    ++((int *) destb);
 bytecopy:
     if ((*destb = *fromb) == 0) {
         return dest;
@@ -101,9 +101,9 @@ char *strncpy(char *dest, const char *src, size_t n) {
 }
 
 int strcmp(char *str1, char *str2) {
-    register u8 *left  = (u8 *) str1;
-    register u8 *right = (u8 *) str2;
-    u32 k1, k2, align, l1, r1, x;
+    register unsigned char *left  = (unsigned char *) str1;
+    register unsigned char *right = (unsigned char *) str2;
+    unsigned int k1, k2, align, l1, r1, x;
 
     l1 = *left;
     r1 = *right;
@@ -111,7 +111,7 @@ int strcmp(char *str1, char *str2) {
         return (l1 - r1);
     }
 
-    if ((align = ((u32) left & 3)) != ((u32) right & 3)) {
+    if ((align = ((unsigned int) left & 3)) != ((unsigned int) right & 3)) {
         goto bytecopy;
     }
     if (align) {
@@ -135,16 +135,16 @@ int strcmp(char *str1, char *str2) {
     k1 = K1;
     k2 = K2;
 
-    l1 = *(u32 *) left;
-    r1 = *(u32 *) right;
+    l1 = *(unsigned int *) left;
+    r1 = *(unsigned int *) right;
     x  = l1 + k2;
     x &= ~l1;
     if (x & k1) {
         goto adjust;
     }
     while (l1 == r1) {
-        l1 = *(++((u32 *) (left)));
-        r1 = *(++((u32 *) (right)));
+        l1 = *(++((unsigned int *) (left)));
+        r1 = *(++((unsigned int *) (right)));
         x  = l1 + k2;
         if (x & k1) {
             goto adjust;
@@ -179,9 +179,9 @@ bytecopy:
 }
 
 int strncmp(char *str1, char *str2, size_t n) {
-    const u8 *p1 = (u8 *) str1;
-    const u8 *p2 = (u8 *) str2;
-    u32 c1, c2;
+    const unsigned char *p1 = (unsigned char *) str1;
+    const unsigned char *p2 = (unsigned char *) str2;
+    unsigned int c1, c2;
 
     n++;
 

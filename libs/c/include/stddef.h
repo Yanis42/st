@@ -22,10 +22,11 @@ typedef intptr_t ptrdiff_t;
 typedef unsigned int size_t;
 
 #ifndef __cplusplus
+typedef int bool;
 typedef unsigned short wchar_t;
+    #define true 1
+    #define false 0
 #endif
-
-typedef wchar_t wint_t;
 
 #ifdef __cplusplus
 }

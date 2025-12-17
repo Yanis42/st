@@ -72,10 +72,10 @@ FILE __files[3] = {
     },
 };
 
-s32 __flush_all(void) {
-    s32 result     = 0;
+int __flush_all(void) {
+    int result     = 0;
     FILE *file     = &__files[0];
-    s32 file_index = 1;
+    int file_index = 1;
 
     do {
         if (file->mode.file_kind != __closed_file) {

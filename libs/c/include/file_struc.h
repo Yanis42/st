@@ -1,7 +1,7 @@
 #ifndef _C_FILE_STRUC_H
 #define _C_FILE_STRUC_H
 
-#include <types.h>
+#include <stddef.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -40,12 +40,12 @@ enum __io_modes {
 };
 
 typedef struct __file_modes {
-    u32 open_mode : 2;
-    u32 io_mode : 3;
-    u32 buffer_mode : 2;
-    u32 file_kind : 3;
-    u32 file_orientation : 2;
-    u32 binary_io : 1;
+    unsigned int open_mode : 2;
+    unsigned int io_mode : 3;
+    unsigned int buffer_mode : 2;
+    unsigned int file_kind : 3;
+    unsigned int file_orientation : 2;
+    unsigned int binary_io : 1;
 } __file_modes;
 
 enum __io_states {
@@ -56,34 +56,34 @@ enum __io_states {
 };
 
 typedef struct __file_state {
-    u32 io_state : 3;
-    u32 free_buffer : 1;
-    u8 eof;
-    u8 error;
+    unsigned int io_state : 3;
+    unsigned int free_buffer : 1;
+    unsigned char eof;
+    unsigned char error;
 } __file_state;
 
 typedef void *__ref_con;
 typedef void (*__idle_proc)(void);
-typedef int (*__pos_proc)(u32 file, u32 *position, s32 mode, void *ref);
-typedef int (*__io_proc)(u32 file, u8 *buffer, s32 *count, void *ref);
-typedef int (*__close_proc)(u32 file);
+typedef int (*__pos_proc)(unsigned int file, unsigned int *position, int mode, void *ref);
+typedef int (*__io_proc)(unsigned int handle, unsigned char *buffer, int *count, void *ref);
+typedef int (*__close_proc)(unsigned int file);
 
 struct _FILE {
     __file_handle handle;
     __file_modes mode;
     __file_state state;
-    u8 char_buffer;
-    u8 char_buffer_overflow;
-    u8 ungetc_buffer[__ungetc_buffer_size];
+    unsigned char char_buffer;
+    unsigned char char_buffer_overflow;
+    unsigned char ungetc_buffer[__ungetc_buffer_size];
     wchar_t ungetwc_buffer[__ungetc_buffer_size];
-    u32 position;
-    u8 *buffer;
-    u32 buffer_size;
-    u8 *buffer_ptr;
-    u32 buffer_len;
-    u32 buffer_alignment;
-    u32 saved_buffer_len;
-    u32 buffer_pos;
+    unsigned int position;
+    unsigned char *buffer;
+    unsigned int buffer_size;
+    unsigned char *buffer_ptr;
+    unsigned int buffer_len;
+    unsigned int buffer_alignment;
+    unsigned int saved_buffer_len;
+    unsigned int buffer_pos;
     __pos_proc position_proc;
     __io_proc read_proc;
     __io_proc write_proc;

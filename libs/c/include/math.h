@@ -3,7 +3,6 @@
 
 #include <errno.h>
 #include <fdlibm.h>
-#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -18,17 +17,17 @@ extern int __float_nan[];
 extern int __float_huge[];
 extern int __double_huge[];
 
-#define NAN (*(f32 *) __float_nan)
-#define INFINITY (*(f32 *) __float_huge)
+#define NAN (*(float *) __float_nan)
+#define INFINITY (*(float *) __float_huge)
 #define HUGE_VAL (*(double *) __double_huge)
 
 // f64 bit-twiddling macros
 #ifdef __BIG_ENDIAN__
-    #define __HI(x) (((s32 *) &x)[0])
-    #define __LO(x) (((s32 *) &x)[1])
+    #define __HI(x) (((int *) &x)[0])
+    #define __LO(x) (((int *) &x)[1])
 #else
-    #define __HI(x) (((s32 *) &x)[1])
-    #define __LO(x) (((s32 *) &x)[0])
+    #define __HI(x) (((int *) &x)[1])
+    #define __LO(x) (((int *) &x)[0])
 #endif
 
 #define FP_NAN 1
@@ -37,7 +36,7 @@ extern int __double_huge[];
 #define FP_NORMAL 4
 #define FP_SUBNORMAL 5
 
-int __fpclassifyd(f64 x);
+int __fpclassifyd(double x);
 int __signbitd(double x);
 double fabs(double x);
 double nan(const char *x);

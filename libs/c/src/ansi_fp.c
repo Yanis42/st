@@ -4,7 +4,6 @@
 #include <fdlibm.h>
 #include <float.h>
 #include <math.h>
-#include <types.h>
 
 #pragma dont_reuse_strings off
 
@@ -15,16 +14,16 @@ static inline int count_trailing(double x) {
     return __builtin___count_trailing_zero64(*(unsigned long long *) &x | 0x0010000000000000);
 }
 
-static inline int __count_trailing_zerol(u32 x) {
+static inline int __count_trailing_zerol(unsigned int x) {
     return 32 - __cntlzw(~x & (x - 1));
 }
 
 static inline int __count_trailing_zero(double n) {
-    u32 *array = (u32 *) &n;
+    unsigned int *array = (unsigned int *) &n;
 
-    u32 hi    = array[1] | 0x100000;
-    u32 lo    = array[0];
-    int zeros = __count_trailing_zerol(lo);
+    unsigned int hi = array[1] | 0x100000;
+    unsigned int lo = array[0];
+    int zeros       = __count_trailing_zerol(lo);
 
     if (lo == 0) {
         return 32 + __count_trailing_zerol(hi);
@@ -34,7 +33,7 @@ static inline int __count_trailing_zero(double n) {
 }
 
 static int __must_round(const decimal *d, int digits) {
-    u8 const *i = d->sig.text + digits;
+    unsigned char const *i = d->sig.text + digits;
 
     if (*i > 5) {
         return 1;
@@ -45,7 +44,7 @@ static int __must_round(const decimal *d, int digits) {
     }
 
     {
-        u8 const *e = d->sig.text + d->sig.length;
+        unsigned char const *e = d->sig.text + d->sig.length;
 
         for (i++; i < e; i++) {
             if (*i != 0) {
@@ -62,8 +61,8 @@ static int __must_round(const decimal *d, int digits) {
 }
 
 static void __dorounddecup(decimal *d, int digits) {
-    u8 *b = d->sig.text;
-    u8 *i = b + digits - 1;
+    unsigned char *b = d->sig.text;
+    unsigned char *i = b + digits - 1;
 
     while (1) {
         if (*i < 9) {
@@ -90,22 +89,22 @@ static void __rounddec(decimal *d, int digits) {
     }
 }
 
-void __ull2dec(decimal *result, u64 val) {
+void __ull2dec(decimal *result, unsigned long long val) {
     result->sgn        = 0;
     result->sig.length = 0;
 
     for (; val != 0; val /= 10) {
-        result->sig.text[result->sig.length++] = (u8) (val % 10);
+        result->sig.text[result->sig.length++] = (unsigned char) (val % 10);
     }
 
     {
-        u8 *i = result->sig.text;
-        u8 *j = result->sig.text + result->sig.length;
+        unsigned char *i = result->sig.text;
+        unsigned char *j = result->sig.text + result->sig.length;
 
         for (; i < --j; ++i) {
-            u8 t = *i;
-            *i   = *j;
-            *j   = t;
+            unsigned char t = *i;
+            *i              = *j;
+            *j              = t;
         }
     }
 
@@ -113,12 +112,12 @@ void __ull2dec(decimal *result, u64 val) {
 }
 
 void __timesdec(decimal *result, const decimal *x, const decimal *y) {
-    u32 accumulator = 0;
-    u8 mantissa[SIGDIGLEN * 2];
+    unsigned int accumulator = 0;
+    unsigned char mantissa[SIGDIGLEN * 2];
     int i = x->sig.length + y->sig.length - 1;
-    u8 *pDigit;
-    u8 *ip = mantissa + i + 1;
-    u8 *ep = ip;
+    unsigned char *pDigit;
+    unsigned char *ip = mantissa + i + 1;
+    unsigned char *ep = ip;
 
     result->sgn = 0;
 
@@ -127,8 +126,8 @@ void __timesdec(decimal *result, const decimal *x, const decimal *y) {
         int j = i - k - 1;
         int l;
         int t;
-        const u8 *jp;
-        const u8 *kp;
+        const unsigned char *jp;
+        const unsigned char *kp;
 
         if (j < 0) {
             j = 0;
@@ -148,25 +147,25 @@ void __timesdec(decimal *result, const decimal *x, const decimal *y) {
             accumulator += *jp * *kp;
         }
 
-        *--ip = (u8) (accumulator % 10);
+        *--ip = (unsigned char) (accumulator % 10);
         accumulator /= 10;
     }
 
     result->exp = (short) (x->exp + y->exp);
 
     if (accumulator) {
-        *--ip = (u8) (accumulator);
+        *--ip = (unsigned char) (accumulator);
         result->exp++;
     }
 
     for (i = 0; i < SIGDIGLEN && ip < ep; i++, ip++) {
         result->sig.text[i] = *ip;
     }
-    result->sig.length = (u8) (i);
+    result->sig.length = (unsigned char) (i);
 
     if (ip < ep && *ip >= 5) {
         if (*ip == 5) {
-            u8 *jp = ip + 1;
+            unsigned char *jp = ip + 1;
             for (; jp < ep; jp++) {
                 if (*jp != 0) {
                     goto round;
@@ -306,38 +305,39 @@ void __two_exp(decimal *result, long exp) {
     }
 }
 
-void __num2dec_internal(decimal *pDecimal, double x) {
-    char sign = (char) (__signbitd(x) != 0);
+void __num2dec_internal(decimal *d, double x) {
+    char sign = (char) (signbit(x) != 0);
 
-    if (x == 0.0) {
-        pDecimal->sgn         = sign;
-        pDecimal->exp         = 0;
-        pDecimal->sig.length  = 1;
-        pDecimal->sig.text[0] = 0;
+    if (x == 0) {
+        d->sgn         = sign;
+        d->exp         = 0;
+        d->sig.length  = 1;
+        d->sig.text[0] = 0;
         return;
     }
 
-    if (!(__fpclassifyd(x) > 2)) {
-        pDecimal->sgn         = sign;
-        pDecimal->exp         = 0;
-        pDecimal->sig.length  = 1;
-        pDecimal->sig.text[0] = (unsigned char) (__fpclassifyd(x) == 1 ? 'N' : 'I');
+    if (!isfinite(x)) {
+        d->sgn         = sign;
+        d->exp         = 0;
+        d->sig.length  = 1;
+        d->sig.text[0] = fpclassify(x) == 1 ? 'N' : 'I';
         return;
     }
 
-    if (sign) {
+    if (sign != 0) {
         x = -x;
     }
 
     {
         int exp;
-        double frac           = frexp(x, &exp);
-        long num_bits_extract = 53 - __count_trailing_zero(frac);
+        double frac          = frexp(x, &exp);
+        int num_bits_extract = 53 - __count_trailing_zero(frac);
         decimal int_d, pow2_d;
+
         __two_exp(&pow2_d, exp - num_bits_extract);
-        __ull2dec(&int_d, (unsigned long long) ldexp(frac, (int) num_bits_extract));
-        __timesdec(pDecimal, &int_d, &pow2_d);
-        pDecimal->sgn = sign;
+        __ull2dec(&int_d, ldexp(frac, num_bits_extract));
+        __timesdec(d, &int_d, &pow2_d);
+        d->sgn = sign;
     }
 }
 

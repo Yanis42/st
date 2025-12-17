@@ -1,6 +1,6 @@
 #include <buffer_io.h>
 
-void __convert_from_newlines(u8 *p, s32 *n) {}
+void __convert_from_newlines(unsigned char *p, int *n) {}
 
 void __prep_buffer(FILE *file) {
     file->buffer_ptr = file->buffer;

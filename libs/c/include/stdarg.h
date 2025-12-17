@@ -7,8 +7,8 @@ extern "C" {
 
 typedef char *va_list;
 
-#define __fourbytealign(n) ((((u32) (n)) + 3U) & ~3U)
-#define __va_start(parm) ((va_list) ((char *) ((u32) (&parm) & ~3U) + __fourbytealign(sizeof(parm))))
+#define __fourbytealign(n) ((((unsigned int) (n)) + 3U) & ~3U)
+#define __va_start(parm) ((va_list) ((char *) ((unsigned int) (&parm) & ~3U) + __fourbytealign(sizeof(parm))))
 
 #define va_start(ap, parm) ((ap) = __va_start(parm))
 #define va_arg(ap, type) (*(type *) ((ap += __fourbytealign(sizeof(type))) - __fourbytealign(sizeof(type))))

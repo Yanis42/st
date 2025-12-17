@@ -1,4 +1,5 @@
 #include <secure_error.h>
+#include <stddef.h>
 
 msl_constraint_handler __msl_constraint_handler;
 

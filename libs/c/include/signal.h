@@ -1,8 +1,6 @@
 #ifndef _C_SIGNAL_H
 #define _C_SIGNAL_H
 
-#include <types.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif

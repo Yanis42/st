@@ -1,8 +1,8 @@
 #ifndef _C_BUFFER_IO_H
 #define _C_BUFFER_IO_H
 
+#include <stddef.h>
 #include <stdio.h>
-#include <types.h>
 
 #ifdef __cplusplus
 extern "C" {
