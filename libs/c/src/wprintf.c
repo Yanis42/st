@@ -10,7 +10,6 @@
 
 #include <wstring.h>
 
-#pragma exceptions on
 #pragma dont_reuse_strings off
 
 #define MAX_SIG_DIG 32
@@ -1030,6 +1029,7 @@ wchar_t *float2str(long double num, wchar_t *wbuff, print_format format) {
     return pw;
 }
 
+// non-matching: https://decomp.me/scratch/bV2T9
 int __wpformatter(void *(*WriteProc)(void *, const wchar_t *, size_t), void *WriteProcArg, const wchar_t *format_str,
                   va_list arg, bool is_secure) {
     int num_chars, chars_written, field_width;

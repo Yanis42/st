@@ -2615,19 +2615,19 @@ data_02045be8 kind:data(any) addr:0x02045be8
 data_02045c18 kind:data(any) addr:0x02045c18
 __files kind:data(any) addr:0x02045c1c
 __float_nan kind:data(any) addr:0x02045d00
-data_02045d04 kind:data(any) addr:0x02045d04
-data_02045d08 kind:data(any) addr:0x02045d08
-data_02045d0c kind:data(any) addr:0x02045d0c
-data_02045d14 kind:data(any) addr:0x02045d14
-data_02045d1c kind:data(any) addr:0x02045d1c
-data_02045d2c kind:data(any) addr:0x02045d2c
-data_02045d4c kind:data(any) addr:0x02045d4c
+@19 kind:data(any) addr:0x02045d04 local
+@16 kind:data(any) addr:0x02045d08 local
+@12 kind:data(any) addr:0x02045d0c local
+__ctype_cmpt kind:data(any) addr:0x02045d14
+__coll_cmpt kind:data(any) addr:0x02045d1c
+__time_cmpt kind:data(any) addr:0x02045d2c
+@15 kind:data(any) addr:0x02045d4c local
 _current_locale kind:data(any) addr:0x02045d58
-data_02045d64 kind:data(any) addr:0x02045d64
-data_02045d70 kind:data(any) addr:0x02045d70
-data_02045d80 kind:data(any) addr:0x02045d80
-data_02045dd8 kind:data(any) addr:0x02045dd8
-data_02045e60 kind:data(any) addr:0x02045e60
+@14 kind:data(any) addr:0x02045d64 local
+@13 kind:data(any) addr:0x02045d70 local
+@17 kind:data(any) addr:0x02045d80 local
+@18 kind:data(any) addr:0x02045dd8 local
+char_coll_table kind:data(any) addr:0x02045e60
 data_02045f20 kind:data(any) addr:0x02045f20
 data_02045f2c kind:data(any) addr:0x02045f2c
 data_02045f38 kind:data(any) addr:0x02045f38
@@ -2893,9 +2893,9 @@ __atexit_funcs kind:bss addr:0x02052b00 local
 __cs_id kind:bss addr:0x02052c00
 __cs_ref kind:bss addr:0x02052c24
 __cs kind:bss addr:0x02052c48
-stderr_buff kind:bss addr:0x02052d20
-stdout_buff kind:bss addr:0x02052e20
-stdin_buff kind:bss addr:0x02052f20
+stderr_buff kind:bss addr:0x02052d20 local
+stdout_buff kind:bss addr:0x02052e20 local
+stdin_buff kind:bss addr:0x02052f20 local
 errno kind:bss addr:0x02053020
 __msl_constraint_handler kind:bss addr:0x02053024
 signal_funcs kind:bss addr:0x02053028

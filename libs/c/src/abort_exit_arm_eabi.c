@@ -7,10 +7,10 @@
 extern void _ExitProcess(void);
 
 static void (*__atexit_funcs[64])(void);
+bool __aborting               = false;
 static int __atexit_curr_func = 0;
 void (*__stdio_exit)(void)    = NULL;
 void (*__console_exit)(void)  = NULL;
-bool __aborting               = false;
 
 void abort(void) {
     raise(SIGABRT);

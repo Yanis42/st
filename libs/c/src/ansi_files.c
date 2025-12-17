@@ -3,10 +3,14 @@
 #include <file_io.h>
 #include <stdio.h>
 
-FILE __files[3] = {
+static console_buff stdin_buff;
+static console_buff stdout_buff;
+static console_buff stderr_buff;
+
+FILE __files[_STATIC_FILES] = {
     {
         0,
-        {__must_exist, __write, 1, __console_file, __unoriented, 0},
+        {__must_exist, __read, console_buff_mode, __console_file, 0},
         {__neutral, 0, 0, 0},
         0,
         0,
@@ -14,7 +18,7 @@ FILE __files[3] = {
         {0, 0},
         0,
         stdin_buff,
-        sizeof(stdin_buff),
+        console_buff_size,
         stdin_buff,
         0,
         0,
@@ -28,7 +32,7 @@ FILE __files[3] = {
     },
     {
         1,
-        {__must_exist, __read_write, 1, __console_file, __unoriented, 0},
+        {__must_exist, __write, console_buff_mode, __console_file, 0},
         {__neutral, 0, 0, 0},
         0,
         0,
@@ -36,7 +40,7 @@ FILE __files[3] = {
         {0, 0},
         0,
         stdout_buff,
-        sizeof(stdout_buff),
+        console_buff_size,
         stdout_buff,
         0,
         0,
@@ -50,7 +54,7 @@ FILE __files[3] = {
     },
     {
         2,
-        {__must_exist, __read_write, 0, __console_file, __unoriented, 0},
+        {__must_exist, __write, _IONBF, __console_file, 0},
         {__neutral, 0, 0, 0},
         0,
         0,
@@ -58,7 +62,7 @@ FILE __files[3] = {
         {0, 0},
         0,
         stderr_buff,
-        sizeof(stderr_buff),
+        console_buff_size,
         stderr_buff,
         0,
         0,

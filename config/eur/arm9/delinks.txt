@@ -22,6 +22,7 @@ src/Main/func_02017ea4.cpp:
     .text       start:0x02017ea4 end:0x02017f38
 
 libs/c/src/locale.c:
+    complete
     .data       start:0x02044790 end:0x020449ac
 
 libs/c/src/abort_exit_arm_eabi.c:
@@ -30,9 +31,14 @@ libs/c/src/abort_exit_arm_eabi.c:
     .text       start:0x020336e8 end:0x02033870
 
 libs/c/src/ansi_files.c:
+    complete
     .data       start:0x020446a8 end:0x0204478c
     .bss       start:0x020517a0 end:0x02051aa0
     .text       start:0x02033870 end:0x020338d4
+
+libs/c/src/float.c:
+    complete
+    .data       start:0x0204478c end:0x02044790
 
 libs/c/src/arith.c:
     complete
@@ -43,7 +49,8 @@ libs/c/src/buffer_io.c:
     .text       start:0x020338ec end:0x0203399c
 
 libs/c/src/file_io.c:
-    .text       start:0x0203399c end:0x02033b14
+    complete
+    .text       start:0x0203399c end:0x02033a80
 
 libs/c/src/math_api.c:
     complete

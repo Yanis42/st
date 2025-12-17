@@ -112,7 +112,7 @@ typedef struct _FILE FILE;
 #define stdout &(__files[1])
 #define stderr &(__files[2])
 
-#define _STATIC_FILES 4
+#define _STATIC_FILES 3
 
 extern FILE __files[];
 

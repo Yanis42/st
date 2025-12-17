@@ -1,5 +1,3 @@
-// ansi_fp.c
-
 #include <ansi_fp.h>
 #include <fdlibm.h>
 #include <float.h>
@@ -305,6 +303,7 @@ void __two_exp(decimal *result, long exp) {
     }
 }
 
+// non-matching: https://decomp.me/scratch/xVomE
 void __num2dec_internal(decimal *d, double x) {
     char sign = (char) (signbit(x) != 0);
 
