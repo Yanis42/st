@@ -13,8 +13,13 @@ enum __UnkId {
 struct UnkStruct_02011e10 {
     /* 00 */ UnkId mId;
     /* 04 */ unk8 mUnk_04[0x28];
-    /* 2C */
+    /* 2C */ unk8 mUnk_2C[0x60 - 0x2C];
+    unk32 mUnk_60;
 };
+
+//! TODO: figure this out
+extern UnkStruct_02011e10 *data_0204999c[4];
+extern UnkStruct_02011e10 data_0204999c_2;
 
 void *SysNew(UnkStruct_02011e10 *param1, s32 length, s32 param3);
 void SysDelete(void *ptr);

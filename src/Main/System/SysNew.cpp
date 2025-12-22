@@ -15,7 +15,6 @@ UnkId *func_02001684(UnkId *, void *);
 void func_020011f4(void *);
 }
 extern char *data_0204372c[];
-extern UnkStruct_02011e10 *data_0204999c[4];
 
 // non-matching
 ARM void *SysNew(UnkStruct_02011e10 *param1, s32 length, s32 param3) {

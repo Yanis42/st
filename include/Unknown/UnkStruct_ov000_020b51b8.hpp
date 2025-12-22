@@ -10,6 +10,7 @@ public:
     /* 0c */ unk32 mUnk_0c;
     /* 10 */ unk32 mUnk_10;
 
+    void func_ov000_0206d0bc(unk32 param1);
     void func_ov000_0206d274(unk32 param1);
     void func_ov000_0206c96c(unk32 param1);
     void func_ov000_0206c9a8(unk32 param1, unk32 param2, unk32 param3, unk32 param4);

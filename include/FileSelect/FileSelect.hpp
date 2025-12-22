@@ -1,0 +1,2005 @@
+#pragma once
+
+#include "System/SysNew.hpp"
+#include "Unknown/UnkSystem1.hpp"
+#include "types.h"
+
+class FileSelect_UnkStruct1_Base : public SysObject {
+public:
+    /* 00 (vtable) */
+
+    FileSelect_UnkStruct1_Base();
+
+    virtual ~FileSelect_UnkStruct1_Base();
+    virtual void vfunc_08(unk32 param1, unk32 param2, unk32 param3); // func_02018374
+    virtual void vfunc_0C() = 0;
+    virtual void vfunc_10(); // func_0201838c
+    virtual void vfunc_14(); // func_02018388
+    virtual void vfunc_18(); // func_02018390
+    virtual void vfunc_1C(); // func_02018394
+    virtual void vfunc_20(); // func_02018398
+    virtual void vfunc_24(); // func_0201839c
+
+    void func_02018374(void);
+};
+
+class FileSelect_UnkStruct1 : public FileSelect_UnkStruct1_Base {
+public:
+    /* 00 (vtable) */
+    /* 04 */ UnkSystem1_ov019_1 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0C */ unk32 mUnk_0C;
+    /* 0C */ unk32 mUnk_10;
+    /* 0C */ unk32 mUnk_14;
+    /* 18 */ unk32 *mUnk_18;
+    /* 1C */ unk32 mUnk_1C;
+    /* 20 */ unk16 mUnk_20;
+    /* 20 */ unk16 mUnk_22;
+    /* 24 */
+
+    FileSelect_UnkStruct1();
+    void func_ov019_020c4ae4(unk32 param1);
+    void func_ov019_020c4b2c(unk32 param1);
+    void func_ov019_020c4b54(unk32 param1);
+
+    virtual ~FileSelect_UnkStruct1(); // func_ov019_020c4928 & func_ov019_020c49ac
+    virtual void vfunc_08(unk32 param1, unk32 param2, unk32 param3); // func_ov019_020c4a38
+    virtual void vfunc_0C(); // func_ov019_020c4aac
+    virtual void vfunc_14(); // func_ov019_020c4aa8
+    virtual void vfunc_18(); // func_ov019_020c4adc
+    virtual void vfunc_20(); // func_ov019_020c4ae0
+
+    static FileSelect_UnkStruct1 *Create();
+};
+
+class FileSelect_UnkClass2_Sub1 : public SysObject {
+public:
+    void func_ov001_020bd734(unk32 *param1);
+    void func_ov001_020bd784();
+    void func_0201c00c(unk32 param1, unk32 param2, unk32 param3);
+};
+
+class FileSelect_UnkClass2_Sub2 : public FileSelect_UnkClass2_Sub1 {
+public:
+    FileSelect_UnkClass2_Sub2();
+    ~FileSelect_UnkClass2_Sub2();
+};
+
+class FileSelect_UnkClass2_Sub3_Base : public SysObject {
+public:
+    FileSelect_UnkClass2_Sub3_Base();
+
+    /* 00 */ virtual ~FileSelect_UnkClass2_Sub3_Base();
+    /* 08 */ virtual void vfunc_08();
+    /* 0C */ virtual void vfunc_0C();
+    /* 10 */ virtual void vfunc_10();
+    /* 14 */ virtual void vfunc_14();
+    /* 18 */ virtual void vfunc_18(void);
+};
+
+class UnkSubStruct1 {
+public:
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0C */ unk32 mUnk_0C;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ unk32 mUnk_28;
+    /* 2C */ unk32 mUnk_2C;
+    /* 30 */ unk32 mUnk_30;
+    /* 34 */ unk32 mUnk_34;
+    /* 38 */ unk32 mUnk_38;
+    /* 3C */ unk32 mUnk_3C;
+    /* 40 */
+
+    UnkSubStruct1();
+    ~UnkSubStruct1();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct2 {
+public:
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0C */ unk32 mUnk_0C;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk32 mUnk_14;
+    /* 18 */ unk32 mUnk_18;
+    /* 1C */ unk32 mUnk_1C;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ unk8 mUnk_28;
+    /* 28 */ unk8 mUnk_29;
+    /* 2C */ unk8 mUnk_2A;
+    /* 2C */ unk8 mUnk_2B;
+    /* 2C */ unk8 mUnk_2C;
+    /* 2C */ unk8 mUnk_2D;
+    /* 2C */ unk8 mUnk_2E;
+    /* 2C */ unk8 mUnk_2F;
+    /* 30 */ unk32 mUnk_30;
+    /* 34 */ unk32 mUnk_34;
+    /* 38 */ unk32 mUnk_38;
+    /* 3C */ unk32 mUnk_3C;
+    /* 40 */ unk32 mUnk_40;
+    /* 44 */ unk32 mUnk_44;
+    /* 48 */ unk32 mUnk_48;
+    /* 4C */ unk32 mUnk_4C;
+    /* 50 */ unk32 mUnk_50;
+    /* 54 */ unk32 mUnk_54;
+    /* 58 */ unk32 mUnk_58;
+    /* 58 */ unk32 mUnk_5C;
+    /* 60 */
+
+    UnkSubStruct2();
+    UnkSubStruct2(unk32 param1, unk32 param2, unk32 param3, unk32 param4, unk32 param5, unk32 param6);
+    ~UnkSubStruct2();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct3 {
+public:
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0C */ unk32 mUnk_0C;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk32 mUnk_14;
+    /* 18 */ unk32 mUnk_18;
+    /* 1C */ unk32 mUnk_1C;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ unk32 mUnk_28;
+    /* 2C */ unk32 mUnk_2C;
+    /* 30 */ unk32 mUnk_30;
+    /* 34 */ unk32 mUnk_34;
+    /* 38 */ unk32 mUnk_38;
+    /* 3C */ unk32 mUnk_3C;
+    /* 40 */ unk32 mUnk_40;
+    /* 44 */
+
+    UnkSubStruct3();
+    // ~UnkSubStruct3();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct4 {
+public:
+    UnkSubStruct4(UnkSubStruct2 *param1, unk32 param2, unk32 param3, unk32 param4);
+    ~UnkSubStruct4();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct5 {
+public:
+    UnkSubStruct5(unk32 param1, unk32 param2, unk32 param3, unk32 param4, unk32 param5, unk32 param6);
+    ~UnkSubStruct5();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct6 {
+public:
+    UnkSubStruct6();
+    ~UnkSubStruct6();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct7_Base {
+public:
+    /* 00 (vtable) */
+    /* 04 */ unk8 mUnk_04[0x14 - 0x04];
+    /* 14 */
+
+    UnkSubStruct7_Base(unk32 param1);
+
+    virtual void vfunc_00() = 0;
+    virtual void vfunc_04() = 0;
+};
+
+class UnkSubStruct7 : public UnkSubStruct7_Base, public UnkSubStruct3 {
+public:
+    /* 00 (base) */
+    /* 44 */ unk32 mUnk_44;
+    /* 44 */ unk32 mUnk_48;
+    /* 44 */ unk32 mUnk_4C[3];
+    /* 50 */
+
+    UnkSubStruct7() :
+        UnkSubStruct7_Base(0),
+        UnkSubStruct3() {}
+
+    virtual void vfunc_00();
+    virtual void vfunc_04();
+};
+
+class UnkSubStruct8 {
+public:
+    /* 00 (vtable) */
+    /* 04 */ void *ptr;
+    /* 14 */
+
+    UnkSubStruct8();
+
+    virtual void vfunc_00();
+};
+
+class UnkSubStruct9 {
+public:
+    /* 000 */ unk32 mUnk_00;
+    /* 780 */
+
+    UnkSubStruct9();
+};
+
+class FileSelect_UnkClass2_Sub8 {
+public:
+    /* 00 */ unk32 mUnk_00;
+    void func_020166cc(void *param1);
+};
+
+class FileSelect_UnkClass2_Sub3 : public FileSelect_UnkClass2_Sub3_Base {
+public:
+    /* 0000 (base) */
+    /* 0004 */ unk32 *mUnk_0004;
+    /* 0008 */ unk32 mUnk_0008;
+    /* 000C */ unk32 mUnk_000C;
+    /* 0010 */ FileSelect_UnkClass2_Sub8 mUnk_0010;
+    /* 0014 */ unk32 mUnk_0014;
+    /* 0018 */ unk32 mUnk_0018;
+    /* 001C */ unk32 mUnk_001C;
+    /* 0020 */ unk32 mUnk_0020;
+    /* 0024 */ unk8 mUnk_0024;
+    /* 0025 */ unk8 mUnk_0025;
+    /* 0026 */ unk8 mUnk_0026;
+    /* 0027 */ unk8 mUnk_0027;
+    /* 0028 */ unk32 mUnk_0028;
+
+    /* 002C */ UnkSubStruct1 mUnk_002C;
+    /* 005C */ UnkSubStruct2 mUnk_005C;
+    /* 00BC */ UnkSubStruct3 mUnk_00BC;
+    /* 0100 */ UnkSubStruct2 mUnk_0100;
+    /* 0160 */ UnkSubStruct4 mUnk_0160;
+    /* 0164 */ unk32 mUnk_0164;
+    /* 0168 */ unk32 mUnk_0168;
+    /* 016C */ unk32 mUnk_016C;
+    /* 0170 */ unk32 mUnk_0170;
+    /* 0174 */ unk32 mUnk_0174;
+    /* 0178 */ unk32 mUnk_0178;
+    /* 017C */ unk32 mUnk_017C;
+    /* 0180 */ unk32 mUnk_0180;
+    /* 0184 */ unk32 mUnk_0184;
+    /* 0188 */ unk32 mUnk_0188;
+    /* 018C */ unk32 mUnk_018C;
+    /* 0190 */ unk32 mUnk_0190;
+    /* 0194 */ unk32 mUnk_0194;
+    /* 0198 */ unk32 mUnk_0198;
+    /* 019C */ unk32 mUnk_019C;
+    /* 01A0 */ unk32 mUnk_01A0;
+    /* 01A4 */ unk32 mUnk_01A4;
+    /* 01A8 */ unk32 mUnk_01A8;
+    /* 01AC */ unk32 mUnk_01AC;
+    /* 01B0 */ unk32 mUnk_01B0;
+    /* 01B4 */ unk32 mUnk_01B4;
+    /* 01B8 */ unk32 mUnk_01B8;
+    /* 01BC */ unk32 mUnk_01BC;
+    /* 01C0 */ unk32 mUnk_01C0;
+    /* 01C4 */ unk32 mUnk_01C4;
+    /* 01C8 */ unk32 mUnk_01C8;
+    /* 01CC */ unk32 mUnk_01CC;
+    /* 01D0 */ unk32 mUnk_01D0;
+    /* 01D4 */ unk32 mUnk_01D4;
+    /* 01D8 */ unk32 mUnk_01D8;
+    /* 01DC */ unk32 mUnk_01DC;
+    /* 01E0 */ unk32 mUnk_01E0;
+    /* 01E4 */ unk32 mUnk_01E4;
+    /* 01E8 */ unk32 mUnk_01E8;
+    /* 01EC */ unk32 mUnk_01EC;
+    /* 01F0 */ unk32 mUnk_01F0;
+    /* 01F4 */ unk32 mUnk_01F4;
+    /* 01F8 */ unk32 mUnk_01F8;
+    /* 01FC */ unk32 mUnk_01FC;
+    /* 0200 */ unk32 mUnk_0200;
+    /* 0204 */ unk32 mUnk_0204;
+    /* 0208 */ unk32 mUnk_0208;
+    /* 020C */ unk32 mUnk_020C;
+    /* 0210 */ unk32 mUnk_0210;
+    /* 0214 */ unk32 mUnk_0214;
+    /* 0218 */ unk32 mUnk_0218;
+    /* 021C */ unk32 mUnk_021C;
+    /* 0220 */ unk32 mUnk_0220;
+    /* 0224 */ unk32 mUnk_0224;
+    /* 0228 */ unk32 mUnk_0228;
+    /* 022C */ unk32 mUnk_022C;
+    /* 0230 */ unk32 mUnk_0230;
+    /* 0234 */ unk32 mUnk_0234;
+    /* 0238 */ unk32 mUnk_0238;
+    /* 023C */ unk32 mUnk_023C;
+    /* 0240 */ unk32 mUnk_0240;
+    /* 0244 */ unk32 mUnk_0244;
+    /* 0248 */ unk32 mUnk_0248;
+    /* 024C */ unk32 mUnk_024C;
+    /* 0250 */ unk32 mUnk_0250;
+    /* 0254 */ unk32 mUnk_0254;
+    /* 0258 */ unk32 mUnk_0258;
+    /* 025C */ unk32 mUnk_025C;
+    /* 0260 */ unk32 mUnk_0260;
+    /* 0264 */ unk32 mUnk_0264;
+    /* 0268 */ unk32 mUnk_0268;
+    /* 026C */ unk32 mUnk_026C;
+    /* 0270 */ unk32 mUnk_0270;
+    /* 0274 */ unk32 mUnk_0274;
+    /* 0278 */ unk32 mUnk_0278;
+    /* 027C */ unk32 mUnk_027C;
+    /* 0280 */ unk32 mUnk_0280;
+    /* 0284 */ unk32 mUnk_0284;
+    /* 0288 */ unk32 mUnk_0288;
+    /* 028C */ unk32 mUnk_028C;
+    /* 0290 */ unk32 mUnk_0290;
+    /* 0294 */ unk32 mUnk_0294;
+    /* 0298 */ unk32 mUnk_0298;
+    /* 029C */ unk32 mUnk_029C;
+    /* 02A0 */ unk32 mUnk_02A0;
+    /* 02A4 */ unk32 mUnk_02A4;
+    /* 02A8 */ unk32 mUnk_02A8;
+    /* 02AC */ unk32 mUnk_02AC;
+    /* 02B0 */ unk32 mUnk_02B0;
+    /* 02B4 */ unk32 mUnk_02B4;
+    /* 02B8 */ unk32 mUnk_02B8;
+    /* 02BC */ unk32 mUnk_02BC;
+    /* 02C0 */ unk32 mUnk_02C0;
+    /* 02C4 */ unk32 mUnk_02C4;
+    /* 02C8 */ unk32 mUnk_02C8;
+    /* 02CC */ unk32 mUnk_02CC;
+    /* 02D0 */ unk32 mUnk_02D0;
+    /* 02D4 */ unk32 mUnk_02D4;
+    /* 02D8 */ unk32 mUnk_02D8;
+    /* 02DC */ unk32 mUnk_02DC;
+    /* 02E0 */ unk32 mUnk_02E0;
+    /* 02E4 */ unk32 mUnk_02E4;
+    /* 02E8 */ unk32 mUnk_02E8;
+    /* 02EC */ unk32 mUnk_02EC;
+    /* 02F0 */ unk32 mUnk_02F0;
+    /* 02F4 */ unk32 mUnk_02F4;
+    /* 02F8 */ unk32 mUnk_02F8;
+    /* 02FC */ unk32 mUnk_02FC;
+    /* 0300 */ unk32 mUnk_0300;
+    /* 0304 */ unk32 mUnk_0304;
+    /* 0308 */ unk32 mUnk_0308;
+    /* 030C */ unk32 mUnk_030C;
+    /* 0310 */ unk32 mUnk_0310;
+    /* 0314 */ unk32 mUnk_0314;
+    /* 0318 */ unk32 mUnk_0318;
+    /* 031C */ unk32 mUnk_031C;
+    /* 0320 */ unk32 mUnk_0320;
+    /* 0324 */ unk32 mUnk_0324;
+    /* 0328 */ unk32 mUnk_0328;
+    /* 032C */ unk32 mUnk_032C;
+    /* 0330 */ unk32 mUnk_0330;
+    /* 0334 */ unk32 mUnk_0334;
+    /* 0338 */ unk32 mUnk_0338;
+    /* 033C */ unk32 mUnk_033C;
+    /* 0340 */ unk32 mUnk_0340;
+    /* 0344 */ unk32 mUnk_0344;
+    /* 0348 */ unk32 mUnk_0348;
+    /* 034C */ unk32 mUnk_034C;
+    /* 0350 */ unk32 mUnk_0350;
+    /* 0354 */ unk32 mUnk_0354;
+    /* 0358 */ unk32 mUnk_0358;
+    /* 035C */ unk32 mUnk_035C;
+    /* 0360 */ unk32 mUnk_0360;
+    /* 0364 */ unk32 mUnk_0364;
+    /* 0368 */ unk32 mUnk_0368;
+    /* 036C */ unk32 mUnk_036C;
+    /* 0370 */ unk32 mUnk_0370;
+    /* 0374 */ unk32 mUnk_0374;
+    /* 0378 */ unk32 mUnk_0378;
+    /* 037C */ unk32 mUnk_037C;
+    /* 0380 */ unk32 mUnk_0380;
+    /* 0384 */ unk32 mUnk_0384;
+    /* 0388 */ unk32 mUnk_0388;
+    /* 038C */ unk32 mUnk_038C;
+    /* 0390 */ unk32 mUnk_0390;
+    /* 0394 */ unk32 mUnk_0394;
+    /* 0398 */ unk32 mUnk_0398;
+
+    /* 039C */ UnkSubStruct3 mUnk_039C;
+
+    class Dummy1 : public SysObject {
+    public:
+        // unk32 *mUnk_03E0;
+        UnkSubStruct2 mUnk_00;
+        unk8 mUnk_60[0x780 - 0x60];
+
+        Dummy1() {};
+        ~Dummy1() {};
+    };
+    class Dummy2 : public SysObject {
+    public:
+        // unk32 *mUnk_03E0;
+        Dummy1 *mUnk_00[2];
+
+        Dummy2() {};
+        ~Dummy2() {};
+        // ~Dummy2() {
+        //     mUnk_00[0] = NULL;
+        //     mUnk_00[1] = NULL;
+        // }
+
+        void Reset() {
+            // delete *mUnk_00;
+
+            Dummy1 *ptr = mUnk_00[1];
+
+            if (mUnk_00[0] != mUnk_00[1]) {
+                while (ptr != mUnk_00[0]) {
+
+                    ptr--;
+                }
+            }
+        }
+    };
+
+    /* 03E0 */ Dummy2 mUnk_03E0;
+    // /* 03E4 */ unk32* mUnk_03E4;
+    /* 03E8 */ UnkSubStruct7 mUnk_03E8[2];
+    /* 0488 */ UnkSubStruct2 mUnk_0488;
+
+    /* 04E8 */ unk32 mUnk_04E8;
+    /* 04EC */ unk32 mUnk_04EC;
+    /* 04F0 */ unk32 mUnk_04F0;
+    /* 04F4 */ unk32 mUnk_04F4;
+    /* 04F8 */ unk32 mUnk_04F8;
+    /* 04FC */ unk32 mUnk_04FC;
+    /* 0500 */ unk32 mUnk_0500;
+    /* 0504 */ unk32 mUnk_0504;
+    /* 0508 */ unk32 mUnk_0508;
+    /* 050C */ unk32 mUnk_050C;
+    /* 0510 */ unk32 mUnk_0510;
+    /* 0514 */ unk32 mUnk_0514;
+    /* 0518 */ unk32 mUnk_0518;
+    /* 051C */ unk32 mUnk_051C;
+
+    /* 0520 */ UnkSubStruct4 mUnk_0520;
+    /* 0524 */ unk32 mUnk_0524;
+    /* 0528 */ unk32 mUnk_0528;
+    /* 052C */ unk32 mUnk_052C;
+    /* 0530 */ unk32 mUnk_0530;
+    /* 0534 */ unk32 mUnk_0534;
+    /* 0538 */ unk32 mUnk_0538;
+    /* 053C */ unk32 mUnk_053C;
+    /* 0540 */ unk32 mUnk_0540;
+    /* 0544 */ unk32 mUnk_0544;
+    /* 0548 */ unk32 mUnk_0548;
+    /* 054C */ unk32 mUnk_054C;
+    /* 0550 */ unk32 mUnk_0550;
+    /* 0554 */ unk32 mUnk_0554;
+    /* 0558 */ unk32 mUnk_0558;
+    /* 055C */ unk32 mUnk_055C;
+    /* 0560 */ unk32 mUnk_0560;
+    /* 0564 */ unk32 mUnk_0564;
+    /* 0568 */ unk32 mUnk_0568;
+    /* 056C */ unk32 mUnk_056C;
+    /* 0570 */ unk32 mUnk_0570;
+    /* 0574 */ unk32 mUnk_0574;
+    /* 0578 */ unk32 mUnk_0578;
+    /* 057C */ unk32 mUnk_057C;
+    /* 0580 */ unk32 mUnk_0580;
+    /* 0584 */ unk32 mUnk_0584;
+    /* 0588 */ unk32 mUnk_0588;
+    /* 058C */ unk32 mUnk_058C;
+    /* 0590 */ unk32 mUnk_0590;
+    /* 0594 */ unk32 mUnk_0594;
+    /* 0598 */ unk32 mUnk_0598;
+    /* 059C */ unk32 mUnk_059C;
+    /* 05A0 */ unk32 mUnk_05A0;
+    /* 05A4 */ unk32 mUnk_05A4;
+    /* 05A8 */ unk32 mUnk_05A8;
+    /* 05AC */ unk32 mUnk_05AC;
+    /* 05B0 */ unk32 mUnk_05B0;
+    /* 05B4 */ unk32 mUnk_05B4;
+    /* 05B8 */ unk32 mUnk_05B8;
+    /* 05BC */ unk32 mUnk_05BC;
+    /* 05C0 */ unk32 mUnk_05C0;
+    /* 05C4 */ unk32 mUnk_05C4;
+    /* 05C8 */ unk32 mUnk_05C8;
+    /* 05CC */ unk32 mUnk_05CC;
+    /* 05D0 */ unk32 mUnk_05D0;
+    /* 05D4 */ unk32 mUnk_05D4;
+    /* 05D8 */ unk32 mUnk_05D8;
+    /* 05DC */ unk32 mUnk_05DC;
+    /* 05E0 */ unk32 mUnk_05E0;
+    /* 05E4 */ unk32 mUnk_05E4;
+    /* 05E8 */ unk32 mUnk_05E8;
+    /* 05EC */ unk32 mUnk_05EC;
+    /* 05F0 */ unk32 mUnk_05F0;
+    /* 05F4 */ unk32 mUnk_05F4;
+    /* 05F8 */ unk32 mUnk_05F8;
+    /* 05FC */ unk32 mUnk_05FC;
+    /* 0600 */ unk32 mUnk_0600;
+    /* 0604 */ unk32 mUnk_0604;
+    /* 0608 */ unk32 mUnk_0608;
+    /* 060C */ unk32 mUnk_060C;
+    /* 0610 */ unk32 mUnk_0610;
+    /* 0614 */ unk32 mUnk_0614;
+    /* 0618 */ unk32 mUnk_0618;
+    /* 061C */ unk32 mUnk_061C;
+    /* 0620 */ unk32 mUnk_0620;
+    /* 0624 */ unk32 mUnk_0624;
+    /* 0628 */ unk32 mUnk_0628;
+    /* 062C */ unk32 mUnk_062C;
+    /* 0630 */ unk32 mUnk_0630;
+    /* 0634 */ unk32 mUnk_0634;
+    /* 0638 */ unk32 mUnk_0638;
+    /* 063C */ unk32 mUnk_063C;
+    /* 0640 */ unk32 mUnk_0640;
+    /* 0644 */ unk32 mUnk_0644;
+    /* 0648 */ unk32 mUnk_0648;
+    /* 064C */ unk32 mUnk_064C;
+    /* 0650 */ unk32 mUnk_0650;
+    /* 0654 */ unk32 mUnk_0654;
+    /* 0658 */ unk32 mUnk_0658;
+    /* 065C */ unk32 mUnk_065C;
+    /* 0660 */ unk32 mUnk_0660;
+    /* 0664 */ unk32 mUnk_0664;
+    /* 0668 */ unk32 mUnk_0668;
+    /* 066C */ unk32 mUnk_066C;
+    /* 0670 */ unk32 mUnk_0670;
+    /* 0674 */ unk32 mUnk_0674;
+    /* 0678 */ unk32 mUnk_0678;
+    /* 067C */ unk32 mUnk_067C;
+    /* 0680 */ unk32 mUnk_0680;
+    /* 0684 */ unk32 mUnk_0684;
+    /* 0688 */ unk32 mUnk_0688;
+    /* 068C */ unk32 mUnk_068C;
+    /* 0690 */ unk32 mUnk_0690;
+    /* 0694 */ unk32 mUnk_0694;
+    /* 0698 */ unk32 mUnk_0698;
+    /* 069C */ unk32 mUnk_069C;
+    /* 06A0 */ unk32 mUnk_06A0;
+    /* 06A4 */ unk32 mUnk_06A4;
+    /* 06A8 */ unk32 mUnk_06A8;
+    /* 06AC */ unk32 mUnk_06AC;
+    /* 06B0 */ unk32 mUnk_06B0;
+    /* 06B4 */ unk32 mUnk_06B4;
+    /* 06B8 */ unk32 mUnk_06B8;
+    /* 06BC */ unk32 mUnk_06BC;
+    /* 06C0 */ unk32 mUnk_06C0;
+    /* 06C4 */ unk32 mUnk_06C4;
+    /* 06C8 */ unk32 mUnk_06C8;
+    /* 06CC */ unk32 mUnk_06CC;
+    /* 06D0 */ unk32 mUnk_06D0;
+    /* 06D4 */ unk32 mUnk_06D4;
+    /* 06D8 */ unk32 mUnk_06D8;
+    /* 06DC */ unk32 mUnk_06DC;
+    /* 06E0 */ unk32 mUnk_06E0;
+    /* 06E4 */ unk32 mUnk_06E4;
+    /* 06E8 */ unk32 mUnk_06E8;
+    /* 06EC */ unk32 mUnk_06EC;
+    /* 06F0 */ unk32 mUnk_06F0;
+    /* 06F4 */ unk32 mUnk_06F4;
+    /* 06F8 */ unk32 mUnk_06F8;
+    /* 06FC */ unk32 mUnk_06FC;
+    /* 0700 */ unk32 mUnk_0700;
+    /* 0704 */ unk32 mUnk_0704;
+    /* 0708 */ unk32 mUnk_0708;
+    /* 070C */ unk32 mUnk_070C;
+    /* 0710 */ unk32 mUnk_0710;
+    /* 0714 */ unk32 mUnk_0714;
+    /* 0718 */ unk32 mUnk_0718;
+    /* 071C */ unk32 mUnk_071C;
+    /* 0720 */ unk32 mUnk_0720;
+    /* 0724 */ unk32 mUnk_0724;
+    /* 0728 */ unk32 mUnk_0728;
+    /* 072C */ unk32 mUnk_072C;
+    /* 0730 */ unk32 mUnk_0730;
+    /* 0734 */ unk32 mUnk_0734;
+    /* 0738 */ unk32 mUnk_0738;
+    /* 073C */ unk32 mUnk_073C;
+    /* 0740 */ unk32 mUnk_0740;
+    /* 0744 */ unk32 mUnk_0744;
+    /* 0748 */ unk32 mUnk_0748;
+    /* 074C */ unk32 mUnk_074C;
+    /* 0750 */ unk32 mUnk_0750;
+    /* 0754 */ unk32 mUnk_0754;
+    /* 0758 */ unk32 mUnk_0758;
+
+    /* 075C */ UnkSubStruct3 mUnk_075C;
+
+    /* 07A0 */ UnkSubStruct3 mUnk_07A0;
+    /* 07E4 */ UnkSubStruct2 mUnk_07E4;
+    /* 0844 */ UnkSubStruct4 mUnk_0844;
+    /* 0848 */ unk32 mUnk_0848;
+    /* 084C */ unk32 mUnk_084C;
+    /* 0850 */ unk32 mUnk_0850;
+    /* 0854 */ unk32 mUnk_0854;
+    /* 0858 */ unk32 mUnk_0858;
+    /* 085C */ unk32 mUnk_085C;
+    /* 0860 */ unk32 mUnk_0860;
+    /* 0864 */ unk32 mUnk_0864;
+    /* 0868 */ unk32 mUnk_0868;
+    /* 086C */ unk32 mUnk_086C;
+    /* 0870 */ unk32 mUnk_0870;
+    /* 0874 */ unk32 mUnk_0874;
+    /* 0878 */ unk32 mUnk_0878;
+    /* 087C */ unk32 mUnk_087C;
+    /* 0880 */ unk32 mUnk_0880;
+    /* 0884 */ unk32 mUnk_0884;
+    /* 0888 */ unk32 mUnk_0888;
+    /* 088C */ unk32 mUnk_088C;
+    /* 0890 */ unk32 mUnk_0890;
+    /* 0894 */ unk32 mUnk_0894;
+    /* 0898 */ unk32 mUnk_0898;
+    /* 089C */ unk32 mUnk_089C;
+    /* 08A0 */ unk32 mUnk_08A0;
+    /* 08A4 */ unk32 mUnk_08A4;
+    /* 08A8 */ unk32 mUnk_08A8;
+    /* 08AC */ unk32 mUnk_08AC;
+    /* 08B0 */ unk32 mUnk_08B0;
+    /* 08B4 */ unk32 mUnk_08B4;
+    /* 08B8 */ unk32 mUnk_08B8;
+    /* 08BC */ unk32 mUnk_08BC;
+    /* 08C0 */ unk32 mUnk_08C0;
+    /* 08C4 */ unk32 mUnk_08C4;
+    /* 08C8 */ unk32 mUnk_08C8;
+    /* 08CC */ unk32 mUnk_08CC;
+    /* 08D0 */ unk32 mUnk_08D0;
+    /* 08D4 */ unk32 mUnk_08D4;
+    /* 08D8 */ unk32 mUnk_08D8;
+    /* 08DC */ unk32 mUnk_08DC;
+    /* 08E0 */ unk32 mUnk_08E0;
+    /* 08E4 */ unk32 mUnk_08E4;
+    /* 08E8 */ unk32 mUnk_08E8;
+    /* 08EC */ unk32 mUnk_08EC;
+    /* 08F0 */ unk32 mUnk_08F0;
+    /* 08F4 */ unk32 mUnk_08F4;
+    /* 08F8 */ unk32 mUnk_08F8;
+    /* 08FC */ unk32 mUnk_08FC;
+    /* 0900 */ unk32 mUnk_0900;
+    /* 0904 */ unk32 mUnk_0904;
+    /* 0908 */ unk32 mUnk_0908;
+    /* 090C */ unk32 mUnk_090C;
+    /* 0910 */ unk32 mUnk_0910;
+    /* 0914 */ unk32 mUnk_0914;
+    /* 0918 */ unk32 mUnk_0918;
+    /* 091C */ unk32 mUnk_091C;
+    /* 0920 */ unk32 mUnk_0920;
+    /* 0924 */ unk32 mUnk_0924;
+    /* 0928 */ unk32 mUnk_0928;
+    /* 092C */ unk32 mUnk_092C;
+    /* 0930 */ unk32 mUnk_0930;
+    /* 0934 */ unk32 mUnk_0934;
+    /* 0938 */ unk32 mUnk_0938;
+    /* 093C */ unk32 mUnk_093C;
+    /* 0940 */ unk32 mUnk_0940;
+    /* 0944 */ unk32 mUnk_0944;
+    /* 0948 */ unk32 mUnk_0948;
+    /* 094C */ unk32 mUnk_094C;
+    /* 0950 */ unk32 mUnk_0950;
+    /* 0954 */ unk32 mUnk_0954;
+    /* 0958 */ unk32 mUnk_0958;
+    /* 095C */ unk32 mUnk_095C;
+    /* 0960 */ unk32 mUnk_0960;
+    /* 0964 */ unk32 mUnk_0964;
+    /* 0968 */ unk32 mUnk_0968;
+    /* 096C */ unk32 mUnk_096C;
+    /* 0970 */ unk32 mUnk_0970;
+    /* 0974 */ unk32 mUnk_0974;
+    /* 0978 */ unk32 mUnk_0978;
+    /* 097C */ unk32 mUnk_097C;
+    /* 0980 */ unk32 mUnk_0980;
+    /* 0984 */ unk32 mUnk_0984;
+    /* 0988 */ unk32 mUnk_0988;
+    /* 098C */ unk32 mUnk_098C;
+    /* 0990 */ unk32 mUnk_0990;
+    /* 0994 */ unk32 mUnk_0994;
+    /* 0998 */ unk32 mUnk_0998;
+    /* 099C */ unk32 mUnk_099C;
+    /* 09A0 */ unk32 mUnk_09A0;
+    /* 09A4 */ unk32 mUnk_09A4;
+    /* 09A8 */ unk32 mUnk_09A8;
+    /* 09AC */ unk32 mUnk_09AC;
+    /* 09B0 */ unk32 mUnk_09B0;
+    /* 09B4 */ unk32 mUnk_09B4;
+    /* 09B8 */ unk32 mUnk_09B8;
+    /* 09BC */ unk32 mUnk_09BC;
+    /* 09C0 */ unk32 mUnk_09C0;
+    /* 09C4 */ unk32 mUnk_09C4;
+    /* 09C8 */ unk32 mUnk_09C8;
+    /* 09CC */ unk32 mUnk_09CC;
+    /* 09D0 */ unk32 mUnk_09D0;
+    /* 09D4 */ unk32 mUnk_09D4;
+    /* 09D8 */ unk32 mUnk_09D8;
+    /* 09DC */ unk32 mUnk_09DC;
+    /* 09E0 */ unk32 mUnk_09E0;
+    /* 09E4 */ unk32 mUnk_09E4;
+    /* 09E8 */ unk32 mUnk_09E8;
+    /* 09EC */ unk32 mUnk_09EC;
+    /* 09F0 */ unk32 mUnk_09F0;
+    /* 09F4 */ unk32 mUnk_09F4;
+    /* 09F8 */ unk32 mUnk_09F8;
+    /* 09FC */ unk32 mUnk_09FC;
+    /* 0A00 */ unk32 mUnk_0A00;
+    /* 0A04 */ unk32 mUnk_0A04;
+    /* 0A08 */ unk32 mUnk_0A08;
+    /* 0A0C */ unk32 mUnk_0A0C;
+    /* 0A10 */ unk32 mUnk_0A10;
+    /* 0A14 */ unk32 mUnk_0A14;
+    /* 0A18 */ unk32 mUnk_0A18;
+    /* 0A1C */ unk32 mUnk_0A1C;
+    /* 0A20 */ unk32 mUnk_0A20;
+    /* 0A24 */ unk32 mUnk_0A24;
+    /* 0A28 */ unk32 mUnk_0A28;
+    /* 0A2C */ unk32 mUnk_0A2C;
+    /* 0A30 */ unk32 mUnk_0A30;
+    /* 0A34 */ unk32 mUnk_0A34;
+    /* 0A38 */ unk32 mUnk_0A38;
+    /* 0A3C */ unk32 mUnk_0A3C;
+    /* 0A40 */ unk32 mUnk_0A40;
+    /* 0A44 */ unk32 mUnk_0A44;
+    /* 0A48 */ unk32 mUnk_0A48;
+    /* 0A4C */ unk32 mUnk_0A4C;
+    /* 0A50 */ unk32 mUnk_0A50;
+    /* 0A54 */ unk32 mUnk_0A54;
+    /* 0A58 */ unk32 mUnk_0A58;
+    /* 0A5C */ unk32 mUnk_0A5C;
+    /* 0A60 */ unk32 mUnk_0A60;
+    /* 0A64 */ unk32 mUnk_0A64;
+    /* 0A68 */ unk32 mUnk_0A68;
+    /* 0A6C */ unk32 mUnk_0A6C;
+    /* 0A70 */ unk32 mUnk_0A70;
+    /* 0A74 */ unk32 mUnk_0A74;
+    /* 0A78 */ unk32 mUnk_0A78;
+    /* 0A7C */ unk32 mUnk_0A7C;
+
+    /* 0A80 */ UnkSubStruct3 mUnk_0A80;
+    /* 0AC4 */ UnkSubStruct2 mUnk_0AC4;
+    /* 0B24 */ UnkSubStruct4 mUnk_0B24;
+    /* 0B28 */ unk32 mUnk_0B28;
+    /* 0B2C */ unk32 mUnk_0B2C;
+    /* 0B30 */ unk32 mUnk_0B30;
+    /* 0B34 */ unk32 mUnk_0B34;
+    /* 0B38 */ unk32 mUnk_0B38;
+    /* 0B3C */ unk32 mUnk_0B3C;
+    /* 0B40 */ unk32 mUnk_0B40;
+    /* 0B44 */ unk32 mUnk_0B44;
+    /* 0B48 */ unk32 mUnk_0B48;
+    /* 0B4C */ unk32 mUnk_0B4C;
+    /* 0B50 */ unk32 mUnk_0B50;
+    /* 0B54 */ unk32 mUnk_0B54;
+    /* 0B58 */ unk32 mUnk_0B58;
+    /* 0B5C */ unk32 mUnk_0B5C;
+    /* 0B60 */ unk32 mUnk_0B60;
+    /* 0B64 */ unk32 mUnk_0B64;
+    /* 0B68 */ unk32 mUnk_0B68;
+    /* 0B6C */ unk32 mUnk_0B6C;
+    /* 0B70 */ unk32 mUnk_0B70;
+    /* 0B74 */ unk32 mUnk_0B74;
+    /* 0B78 */ unk32 mUnk_0B78;
+    /* 0B7C */ unk32 mUnk_0B7C;
+    /* 0B80 */ unk32 mUnk_0B80;
+    /* 0B84 */ unk32 mUnk_0B84;
+    /* 0B88 */ unk32 mUnk_0B88;
+    /* 0B8C */ unk32 mUnk_0B8C;
+    /* 0B90 */ unk32 mUnk_0B90;
+    /* 0B94 */ unk32 mUnk_0B94;
+    /* 0B98 */ unk32 mUnk_0B98;
+    /* 0B9C */ unk32 mUnk_0B9C;
+    /* 0BA0 */ unk32 mUnk_0BA0;
+    /* 0BA4 */ unk32 mUnk_0BA4;
+    /* 0BA8 */ unk32 mUnk_0BA8;
+    /* 0BAC */ unk32 mUnk_0BAC;
+    /* 0BB0 */ unk32 mUnk_0BB0;
+    /* 0BB4 */ unk32 mUnk_0BB4;
+    /* 0BB8 */ unk32 mUnk_0BB8;
+    /* 0BBC */ unk32 mUnk_0BBC;
+    /* 0BC0 */ unk32 mUnk_0BC0;
+    /* 0BC4 */ unk32 mUnk_0BC4;
+    /* 0BC8 */ unk32 mUnk_0BC8;
+    /* 0BCC */ unk32 mUnk_0BCC;
+    /* 0BD0 */ unk32 mUnk_0BD0;
+    /* 0BD4 */ unk32 mUnk_0BD4;
+    /* 0BD8 */ unk32 mUnk_0BD8;
+    /* 0BDC */ unk32 mUnk_0BDC;
+    /* 0BE0 */ unk32 mUnk_0BE0;
+    /* 0BE4 */ unk32 mUnk_0BE4;
+    /* 0BE8 */ unk32 mUnk_0BE8;
+    /* 0BEC */ unk32 mUnk_0BEC;
+    /* 0BF0 */ unk32 mUnk_0BF0;
+    /* 0BF4 */ unk32 mUnk_0BF4;
+    /* 0BF8 */ unk32 mUnk_0BF8;
+    /* 0BFC */ unk32 mUnk_0BFC;
+    /* 0C00 */ unk32 mUnk_0C00;
+    /* 0C04 */ unk32 mUnk_0C04;
+    /* 0C08 */ unk32 mUnk_0C08;
+    /* 0C0C */ unk32 mUnk_0C0C;
+    /* 0C10 */ unk32 mUnk_0C10;
+    /* 0C14 */ unk32 mUnk_0C14;
+    /* 0C18 */ unk32 mUnk_0C18;
+    /* 0C1C */ unk32 mUnk_0C1C;
+    /* 0C20 */ unk32 mUnk_0C20;
+    /* 0C24 */ unk32 mUnk_0C24;
+    /* 0C28 */ unk32 mUnk_0C28;
+    /* 0C2C */ unk32 mUnk_0C2C;
+    /* 0C30 */ unk32 mUnk_0C30;
+    /* 0C34 */ unk32 mUnk_0C34;
+    /* 0C38 */ unk32 mUnk_0C38;
+    /* 0C3C */ unk32 mUnk_0C3C;
+    /* 0C40 */ unk32 mUnk_0C40;
+    /* 0C44 */ unk32 mUnk_0C44;
+    /* 0C48 */ unk32 mUnk_0C48;
+    /* 0C4C */ unk32 mUnk_0C4C;
+    /* 0C50 */ unk32 mUnk_0C50;
+    /* 0C54 */ unk32 mUnk_0C54;
+    /* 0C58 */ unk32 mUnk_0C58;
+    /* 0C5C */ unk32 mUnk_0C5C;
+    /* 0C60 */ unk32 mUnk_0C60;
+    /* 0C64 */ unk32 mUnk_0C64;
+    /* 0C68 */ unk32 mUnk_0C68;
+    /* 0C6C */ unk32 mUnk_0C6C;
+    /* 0C70 */ unk32 mUnk_0C70;
+    /* 0C74 */ unk32 mUnk_0C74;
+    /* 0C78 */ unk32 mUnk_0C78;
+    /* 0C7C */ unk32 mUnk_0C7C;
+    /* 0C80 */ unk32 mUnk_0C80;
+    /* 0C84 */ unk32 mUnk_0C84;
+    /* 0C88 */ unk32 mUnk_0C88;
+    /* 0C8C */ unk32 mUnk_0C8C;
+    /* 0C90 */ unk32 mUnk_0C90;
+    /* 0C94 */ unk32 mUnk_0C94;
+    /* 0C98 */ unk32 mUnk_0C98;
+    /* 0C9C */ unk32 mUnk_0C9C;
+    /* 0CA0 */ unk32 mUnk_0CA0;
+    /* 0CA4 */ unk32 mUnk_0CA4;
+    /* 0CA8 */ unk32 mUnk_0CA8;
+    /* 0CAC */ unk32 mUnk_0CAC;
+    /* 0CB0 */ unk32 mUnk_0CB0;
+    /* 0CB4 */ unk32 mUnk_0CB4;
+    /* 0CB8 */ unk32 mUnk_0CB8;
+    /* 0CBC */ unk32 mUnk_0CBC;
+    /* 0CC0 */ unk32 mUnk_0CC0;
+    /* 0CC4 */ unk32 mUnk_0CC4;
+    /* 0CC8 */ unk32 mUnk_0CC8;
+    /* 0CCC */ unk32 mUnk_0CCC;
+    /* 0CD0 */ unk32 mUnk_0CD0;
+    /* 0CD4 */ unk32 mUnk_0CD4;
+    /* 0CD8 */ unk32 mUnk_0CD8;
+    /* 0CDC */ unk32 mUnk_0CDC;
+    /* 0CE0 */ unk32 mUnk_0CE0;
+    /* 0CE4 */ unk32 mUnk_0CE4;
+    /* 0CE8 */ unk32 mUnk_0CE8;
+    /* 0CEC */ unk32 mUnk_0CEC;
+    /* 0CF0 */ unk32 mUnk_0CF0;
+    /* 0CF4 */ unk32 mUnk_0CF4;
+    /* 0CF8 */ unk32 mUnk_0CF8;
+    /* 0CFC */ unk32 mUnk_0CFC;
+    /* 0D00 */ unk32 mUnk_0D00;
+    /* 0D04 */ unk32 mUnk_0D04;
+    /* 0D08 */ unk32 mUnk_0D08;
+    /* 0D0C */ unk32 mUnk_0D0C;
+    /* 0D10 */ unk32 mUnk_0D10;
+    /* 0D14 */ unk32 mUnk_0D14;
+    /* 0D18 */ unk32 mUnk_0D18;
+    /* 0D1C */ unk32 mUnk_0D1C;
+    /* 0D20 */ unk32 mUnk_0D20;
+    /* 0D24 */ unk32 mUnk_0D24;
+    /* 0D28 */ unk32 mUnk_0D28;
+    /* 0D2C */ unk32 mUnk_0D2C;
+    /* 0D30 */ unk32 mUnk_0D30;
+    /* 0D34 */ unk32 mUnk_0D34;
+    /* 0D38 */ unk32 mUnk_0D38;
+    /* 0D3C */ unk32 mUnk_0D3C;
+    /* 0D40 */ unk32 mUnk_0D40;
+    /* 0D44 */ unk32 mUnk_0D44;
+    /* 0D48 */ unk32 mUnk_0D48;
+    /* 0D4C */ unk32 mUnk_0D4C;
+    /* 0D50 */ unk32 mUnk_0D50;
+    /* 0D54 */ unk32 mUnk_0D54;
+    /* 0D58 */ unk32 mUnk_0D58;
+    /* 0D5C */ unk32 mUnk_0D5C;
+
+    /* 0D60 */ UnkSubStruct3 mUnk_0D60;
+    /* 0DA4 */ UnkSubStruct2 mUnk_0DA4;
+
+    /* 0E04 */ unk32 mUnk_0E04;
+    /* 0E08 */ unk32 mUnk_0E08;
+    /* 0E0C */ unk32 mUnk_0E0C;
+    /* 0E10 */ unk32 mUnk_0E10;
+    /* 0E14 */ unk32 mUnk_0E14;
+    /* 0E18 */ unk32 mUnk_0E18;
+    /* 0E1C */ unk32 mUnk_0E1C;
+    /* 0E20 */ unk32 mUnk_0E20;
+    /* 0E24 */ unk32 mUnk_0E24;
+    /* 0E28 */ unk32 mUnk_0E28;
+    /* 0E2C */ unk32 mUnk_0E2C;
+    /* 0E30 */ unk32 mUnk_0E30;
+    /* 0E34 */ unk32 mUnk_0E34;
+    /* 0E38 */ unk32 mUnk_0E38;
+
+    /* 0E3C */ UnkSubStruct4 mUnk_0E3C;
+    /* 0E40 */ unk32 mUnk_0E40;
+    /* 0E44 */ unk32 mUnk_0E44;
+    /* 0E48 */ unk32 mUnk_0E48;
+    /* 0E4C */ unk32 mUnk_0E4C;
+    /* 0E50 */ unk32 mUnk_0E50;
+    /* 0E54 */ unk32 mUnk_0E54;
+    /* 0E58 */ unk32 mUnk_0E58;
+    /* 0E5C */ unk32 mUnk_0E5C;
+    /* 0E60 */ unk32 mUnk_0E60;
+    /* 0E64 */ unk32 mUnk_0E64;
+    /* 0E68 */ unk32 mUnk_0E68;
+    /* 0E6C */ unk32 mUnk_0E6C;
+    /* 0E70 */ unk32 mUnk_0E70;
+    /* 0E74 */ unk32 mUnk_0E74;
+    /* 0E78 */ unk32 mUnk_0E78;
+    /* 0E7C */ unk32 mUnk_0E7C;
+    /* 0E80 */ unk32 mUnk_0E80;
+    /* 0E84 */ unk32 mUnk_0E84;
+    /* 0E88 */ unk32 mUnk_0E88;
+    /* 0E8C */ unk32 mUnk_0E8C;
+    /* 0E90 */ unk32 mUnk_0E90;
+    /* 0E94 */ unk32 mUnk_0E94;
+    /* 0E98 */ unk32 mUnk_0E98;
+    /* 0E9C */ unk32 mUnk_0E9C;
+    /* 0EA0 */ unk32 mUnk_0EA0;
+    /* 0EA4 */ unk32 mUnk_0EA4;
+    /* 0EA8 */ unk32 mUnk_0EA8;
+    /* 0EAC */ unk32 mUnk_0EAC;
+    /* 0EB0 */ unk32 mUnk_0EB0;
+    /* 0EB4 */ unk32 mUnk_0EB4;
+    /* 0EB8 */ unk32 mUnk_0EB8;
+    /* 0EBC */ unk32 mUnk_0EBC;
+    /* 0EC0 */ unk32 mUnk_0EC0;
+    /* 0EC4 */ unk32 mUnk_0EC4;
+    /* 0EC8 */ unk32 mUnk_0EC8;
+    /* 0ECC */ unk32 mUnk_0ECC;
+    /* 0ED0 */ unk32 mUnk_0ED0;
+    /* 0ED4 */ unk32 mUnk_0ED4;
+    /* 0ED8 */ unk32 mUnk_0ED8;
+    /* 0EDC */ unk32 mUnk_0EDC;
+    /* 0EE0 */ unk32 mUnk_0EE0;
+    /* 0EE4 */ unk32 mUnk_0EE4;
+    /* 0EE8 */ unk32 mUnk_0EE8;
+    /* 0EEC */ unk32 mUnk_0EEC;
+    /* 0EF0 */ unk32 mUnk_0EF0;
+    /* 0EF4 */ unk32 mUnk_0EF4;
+    /* 0EF8 */ unk32 mUnk_0EF8;
+    /* 0EFC */ unk32 mUnk_0EFC;
+    /* 0F00 */ unk32 mUnk_0F00;
+    /* 0F04 */ unk32 mUnk_0F04;
+    /* 0F08 */ unk32 mUnk_0F08;
+    /* 0F0C */ unk32 mUnk_0F0C;
+    /* 0F10 */ unk32 mUnk_0F10;
+    /* 0F14 */ unk32 mUnk_0F14;
+    /* 0F18 */ unk32 mUnk_0F18;
+    /* 0F1C */ unk32 mUnk_0F1C;
+    /* 0F20 */ unk32 mUnk_0F20;
+    /* 0F24 */ unk32 mUnk_0F24;
+    /* 0F28 */ unk32 mUnk_0F28;
+    /* 0F2C */ unk32 mUnk_0F2C;
+    /* 0F30 */ unk32 mUnk_0F30;
+    /* 0F34 */ unk32 mUnk_0F34;
+    /* 0F38 */ unk32 mUnk_0F38;
+    /* 0F3C */ unk32 mUnk_0F3C;
+    /* 0F40 */ unk32 mUnk_0F40;
+    /* 0F44 */ unk32 mUnk_0F44;
+    /* 0F48 */ unk32 mUnk_0F48;
+    /* 0F4C */ unk32 mUnk_0F4C;
+    /* 0F50 */ unk32 mUnk_0F50;
+    /* 0F54 */ unk32 mUnk_0F54;
+    /* 0F58 */ unk32 mUnk_0F58;
+    /* 0F5C */ unk32 mUnk_0F5C;
+    /* 0F60 */ unk32 mUnk_0F60;
+    /* 0F64 */ unk32 mUnk_0F64;
+    /* 0F68 */ unk32 mUnk_0F68;
+    /* 0F6C */ unk32 mUnk_0F6C;
+    /* 0F70 */ unk32 mUnk_0F70;
+    /* 0F74 */ unk32 mUnk_0F74;
+    /* 0F78 */ unk32 mUnk_0F78;
+    /* 0F7C */ unk32 mUnk_0F7C;
+    /* 0F80 */ unk32 mUnk_0F80;
+    /* 0F84 */ unk32 mUnk_0F84;
+    /* 0F88 */ unk32 mUnk_0F88;
+    /* 0F8C */ unk32 mUnk_0F8C;
+    /* 0F90 */ unk32 mUnk_0F90;
+    /* 0F94 */ unk32 mUnk_0F94;
+    /* 0F98 */ unk32 mUnk_0F98;
+    /* 0F9C */ unk32 mUnk_0F9C;
+    /* 0FA0 */ unk32 mUnk_0FA0;
+    /* 0FA4 */ unk32 mUnk_0FA4;
+    /* 0FA8 */ unk32 mUnk_0FA8;
+    /* 0FAC */ unk32 mUnk_0FAC;
+    /* 0FB0 */ unk32 mUnk_0FB0;
+    /* 0FB4 */ unk32 mUnk_0FB4;
+    /* 0FB8 */ unk32 mUnk_0FB8;
+    /* 0FBC */ unk32 mUnk_0FBC;
+    /* 0FC0 */ unk32 mUnk_0FC0;
+    /* 0FC4 */ unk32 mUnk_0FC4;
+    /* 0FC8 */ unk32 mUnk_0FC8;
+    /* 0FCC */ unk32 mUnk_0FCC;
+    /* 0FD0 */ unk32 mUnk_0FD0;
+    /* 0FD4 */ unk32 mUnk_0FD4;
+    /* 0FD8 */ unk32 mUnk_0FD8;
+    /* 0FDC */ unk32 mUnk_0FDC;
+    /* 0FE0 */ unk32 mUnk_0FE0;
+    /* 0FE4 */ unk32 mUnk_0FE4;
+    /* 0FE8 */ unk32 mUnk_0FE8;
+    /* 0FEC */ unk32 mUnk_0FEC;
+    /* 0FF0 */ unk32 mUnk_0FF0;
+    /* 0FF4 */ unk32 mUnk_0FF4;
+    /* 0FF8 */ unk32 mUnk_0FF8;
+    /* 0FFC */ unk32 mUnk_0FFC;
+    /* 1000 */ unk32 mUnk_1000;
+    /* 1004 */ unk32 mUnk_1004;
+    /* 1008 */ unk32 mUnk_1008;
+    /* 100C */ unk32 mUnk_100C;
+    /* 1010 */ unk32 mUnk_1010;
+    /* 1014 */ unk32 mUnk_1014;
+    /* 1018 */ unk32 mUnk_1018;
+    /* 101C */ unk32 mUnk_101C;
+    /* 1020 */ unk32 mUnk_1020;
+    /* 1024 */ unk32 mUnk_1024;
+    /* 1028 */ unk32 mUnk_1028;
+    /* 102C */ unk32 mUnk_102C;
+    /* 1030 */ unk32 mUnk_1030;
+    /* 1034 */ unk32 mUnk_1034;
+    /* 1038 */ unk32 mUnk_1038;
+    /* 103C */ unk32 mUnk_103C;
+    /* 1040 */ unk32 mUnk_1040;
+    /* 1044 */ unk32 mUnk_1044;
+    /* 1048 */ unk32 mUnk_1048;
+    /* 104C */ unk32 mUnk_104C;
+    /* 1050 */ unk32 mUnk_1050;
+    /* 1054 */ unk32 mUnk_1054;
+    /* 1058 */ unk32 mUnk_1058;
+    /* 105C */ unk32 mUnk_105C;
+    /* 1060 */ unk32 mUnk_1060;
+    /* 1064 */ unk32 mUnk_1064;
+    /* 1068 */ unk32 mUnk_1068;
+    /* 106C */ unk32 mUnk_106C;
+    /* 1070 */ unk32 mUnk_1070;
+    /* 1074 */ unk32 mUnk_1074;
+
+    /* 1078 */ UnkSubStruct3 mUnk_1078;
+    /* 10BC */ UnkSubStruct3 mUnk_10BC;
+    /* 1100 */ UnkSubStruct3 mUnk_1100;
+    /* 1144 */ UnkSubStruct6 mUnk_1144;
+    /* 1148 */ unk32 mUnk_1148;
+    /* 114C */ unk32 mUnk_114C;
+    /* 1150 */ unk32 mUnk_1150;
+    /* 1154 */ unk32 mUnk_1154;
+    /* 1158 */ unk32 mUnk_1158;
+    /* 115C */ unk32 mUnk_115C;
+    /* 1160 */ unk32 mUnk_1160;
+    /* 1164 */ unk32 mUnk_1164;
+    /* 1168 */ unk32 mUnk_1168;
+    /* 116C */ unk32 mUnk_116C;
+    /* 1170 */ unk32 mUnk_1170;
+    /* 1174 */ unk32 mUnk_1174;
+    /* 1178 */ unk32 mUnk_1178;
+    /* 117C */ unk32 mUnk_117C;
+    /* 1180 */ unk32 mUnk_1180;
+    /* 1184 */ unk32 mUnk_1184;
+    /* 1188 */ unk32 mUnk_1188;
+    /* 118C */ unk32 mUnk_118C;
+    /* 1190 */ unk32 mUnk_1190;
+    /* 1194 */ unk32 mUnk_1194;
+    /* 1198 */ unk32 mUnk_1198;
+    /* 119C */ unk32 mUnk_119C;
+    /* 11A0 */ unk32 mUnk_11A0;
+    /* 11A4 */ unk32 mUnk_11A4;
+    /* 11A8 */ unk32 mUnk_11A8;
+    /* 11AC */ unk32 mUnk_11AC;
+    /* 11B0 */ unk32 mUnk_11B0;
+    /* 11B4 */ unk32 mUnk_11B4;
+    /* 11B8 */ unk32 mUnk_11B8;
+    /* 11BC */ UnkSubStruct2 mUnk_11BC;
+    /* 121C */ unk32 mUnk_121C;
+    /* 1220 */ unk32 mUnk_1220;
+    /* 1224 */ unk32 mUnk_1224;
+    /* 1228 */ unk32 mUnk_1228;
+    /* 122C */ unk32 mUnk_122C;
+    /* 1230 */ unk32 mUnk_1230;
+    /* 1234 */ unk32 mUnk_1234;
+    /* 1238 */ unk32 mUnk_1238;
+    /* 123C */ unk32 mUnk_123C;
+    /* 1240 */ unk32 mUnk_1240;
+    /* 1244 */ unk32 mUnk_1244;
+    /* 1248 */ unk32 mUnk_1248;
+    /* 124C */ unk32 mUnk_124C;
+    /* 1250 */ unk32 mUnk_1250;
+    /* 1254 */ UnkSubStruct4 mUnk_1254;
+    /* 1258 */ unk32 mUnk_1258;
+    /* 125C */ unk32 mUnk_125C;
+    /* 1260 */ unk32 mUnk_1260;
+    /* 1264 */ unk32 mUnk_1264;
+    /* 1268 */ unk32 mUnk_1268;
+    /* 126C */ unk32 mUnk_126C;
+    /* 1270 */ unk32 mUnk_1270;
+    /* 1274 */ unk32 mUnk_1274;
+    /* 1278 */ unk32 mUnk_1278;
+    /* 127C */ unk32 mUnk_127C;
+    /* 1280 */ unk32 mUnk_1280;
+    /* 1284 */ unk32 mUnk_1284;
+    /* 1288 */ unk32 mUnk_1288;
+    /* 128C */ unk32 mUnk_128C;
+    /* 1290 */ unk32 mUnk_1290;
+    /* 1294 */ unk32 mUnk_1294;
+    /* 1298 */ unk32 mUnk_1298;
+    /* 129C */ unk32 mUnk_129C;
+    /* 12A0 */ unk32 mUnk_12A0;
+    /* 12A4 */ unk32 mUnk_12A4;
+    /* 12A8 */ unk32 mUnk_12A8;
+    /* 12AC */ unk32 mUnk_12AC;
+    /* 12B0 */ unk32 mUnk_12B0;
+    /* 12B4 */ unk32 mUnk_12B4;
+    /* 12B8 */ unk32 mUnk_12B8;
+    /* 12BC */ unk32 mUnk_12BC;
+    /* 12C0 */ unk32 mUnk_12C0;
+    /* 12C4 */ unk32 mUnk_12C4;
+    /* 12C8 */ unk32 mUnk_12C8;
+    /* 12CC */ unk32 mUnk_12CC;
+    /* 12D0 */ unk32 mUnk_12D0;
+    /* 12D4 */ unk32 mUnk_12D4;
+    /* 12D8 */ unk32 mUnk_12D8;
+    /* 12DC */ unk32 mUnk_12DC;
+    /* 12E0 */ unk32 mUnk_12E0;
+    /* 12E4 */ unk32 mUnk_12E4;
+    /* 12E8 */ unk32 mUnk_12E8;
+    /* 12EC */ unk32 mUnk_12EC;
+    /* 12F0 */ unk32 mUnk_12F0;
+    /* 12F4 */ unk32 mUnk_12F4;
+    /* 12F8 */ unk32 mUnk_12F8;
+    /* 12FC */ unk32 mUnk_12FC;
+    /* 1300 */ unk32 mUnk_1300;
+    /* 1304 */ unk32 mUnk_1304;
+    /* 1308 */ unk32 mUnk_1308;
+    /* 130C */ unk32 mUnk_130C;
+    /* 1310 */ unk32 mUnk_1310;
+    /* 1314 */ unk32 mUnk_1314;
+    /* 1318 */ unk32 mUnk_1318;
+    /* 131C */ unk32 mUnk_131C;
+    /* 1320 */ unk32 mUnk_1320;
+    /* 1324 */ unk32 mUnk_1324;
+    /* 1328 */ unk32 mUnk_1328;
+    /* 132C */ unk32 mUnk_132C;
+    /* 1330 */ unk32 mUnk_1330;
+    /* 1334 */ unk32 mUnk_1334;
+    /* 1338 */ unk32 mUnk_1338;
+    /* 133C */ unk32 mUnk_133C;
+    /* 1340 */ unk32 mUnk_1340;
+    /* 1344 */ unk32 mUnk_1344;
+    /* 1348 */ unk32 mUnk_1348;
+    /* 134C */ unk32 mUnk_134C;
+    /* 1350 */ unk32 mUnk_1350;
+    /* 1354 */ unk32 mUnk_1354;
+    /* 1358 */ unk32 mUnk_1358;
+    /* 135C */ unk32 mUnk_135C;
+    /* 1360 */ unk32 mUnk_1360;
+    /* 1364 */ unk32 mUnk_1364;
+    /* 1368 */ unk32 mUnk_1368;
+    /* 136C */ unk32 mUnk_136C;
+    /* 1370 */ unk32 mUnk_1370;
+    /* 1374 */ unk32 mUnk_1374;
+    /* 1378 */ unk32 mUnk_1378;
+    /* 137C */ unk32 mUnk_137C;
+    /* 1380 */ unk32 mUnk_1380;
+    /* 1384 */ unk32 mUnk_1384;
+    /* 1388 */ unk32 mUnk_1388;
+    /* 138C */ unk32 mUnk_138C;
+    /* 1390 */ unk32 mUnk_1390;
+    /* 1394 */ unk32 mUnk_1394;
+    /* 1398 */ unk32 mUnk_1398;
+    /* 139C */ unk32 mUnk_139C;
+    /* 13A0 */ unk32 mUnk_13A0;
+    /* 13A4 */ unk32 mUnk_13A4;
+    /* 13A8 */ unk32 mUnk_13A8;
+    /* 13AC */ unk32 mUnk_13AC;
+    /* 13B0 */ unk32 mUnk_13B0;
+    /* 13B4 */ unk32 mUnk_13B4;
+    /* 13B8 */ unk32 mUnk_13B8;
+    /* 13BC */ unk32 mUnk_13BC;
+    /* 13C0 */ unk32 mUnk_13C0;
+    /* 13C4 */ unk32 mUnk_13C4;
+    /* 13C8 */ unk32 mUnk_13C8;
+    /* 13CC */ unk32 mUnk_13CC;
+    /* 13D0 */ unk32 mUnk_13D0;
+    /* 13D4 */ unk32 mUnk_13D4;
+    /* 13D8 */ unk32 mUnk_13D8;
+    /* 13DC */ unk32 mUnk_13DC;
+    /* 13E0 */ unk32 mUnk_13E0;
+    /* 13E4 */ unk32 mUnk_13E4;
+    /* 13E8 */ unk32 mUnk_13E8;
+    /* 13EC */ unk32 mUnk_13EC;
+    /* 13F0 */ unk32 mUnk_13F0;
+    /* 13F4 */ unk32 mUnk_13F4;
+    /* 13F8 */ unk32 mUnk_13F8;
+    /* 13FC */ unk32 mUnk_13FC;
+    /* 1400 */ unk32 mUnk_1400;
+    /* 1404 */ unk32 mUnk_1404;
+    /* 1408 */ unk32 mUnk_1408;
+    /* 140C */ unk32 mUnk_140C;
+    /* 1410 */ unk32 mUnk_1410;
+    /* 1414 */ unk32 mUnk_1414;
+    /* 1418 */ unk32 mUnk_1418;
+    /* 141C */ unk32 mUnk_141C;
+    /* 1420 */ unk32 mUnk_1420;
+    /* 1424 */ unk32 mUnk_1424;
+    /* 1428 */ unk32 mUnk_1428;
+    /* 142C */ unk32 mUnk_142C;
+    /* 1430 */ unk32 mUnk_1430;
+    /* 1434 */ unk32 mUnk_1434;
+    /* 1438 */ unk32 mUnk_1438;
+    /* 143C */ unk32 mUnk_143C;
+    /* 1440 */ unk32 mUnk_1440;
+    /* 1444 */ unk32 mUnk_1444;
+    /* 1448 */ unk32 mUnk_1448;
+    /* 144C */ unk32 mUnk_144C;
+    /* 1450 */ unk32 mUnk_1450;
+    /* 1454 */ unk32 mUnk_1454;
+    /* 1458 */ unk32 mUnk_1458;
+    /* 145C */ unk32 mUnk_145C;
+    /* 1460 */ unk32 mUnk_1460;
+    /* 1464 */ unk32 mUnk_1464;
+    /* 1468 */ unk32 mUnk_1468;
+    /* 146C */ unk32 mUnk_146C;
+    /* 1470 */ unk32 mUnk_1470;
+    /* 1474 */ unk32 mUnk_1474;
+    /* 1478 */ unk32 mUnk_1478;
+    /* 147C */ unk32 mUnk_147C;
+    /* 1480 */ unk32 mUnk_1480;
+    /* 1484 */ unk32 mUnk_1484;
+    /* 1488 */ unk32 mUnk_1488;
+    /* 148C */ unk32 mUnk_148C;
+
+    /* 1490 */ UnkSubStruct3 mUnk_1490;
+    /* 14D4 */ UnkSubStruct3 mUnk_14D4;
+    /* 1518 */ UnkSubStruct3 mUnk_1518;
+    /* 155C */ UnkSubStruct6 mUnk_155C;
+    /* 1560 */ unk32 mUnk_1560;
+    /* 1564 */ unk32 mUnk_1564;
+    /* 1568 */ unk32 mUnk_1568;
+    /* 156C */ unk32 mUnk_156C;
+    /* 1570 */ unk32 mUnk_1570;
+    /* 1574 */ unk32 mUnk_1574;
+    /* 1578 */ unk32 mUnk_1578;
+    /* 157C */ unk32 mUnk_157C;
+    /* 1580 */ unk32 mUnk_1580;
+    /* 1584 */ unk32 mUnk_1584;
+    /* 1588 */ unk32 mUnk_1588;
+    /* 158C */ unk32 mUnk_158C;
+    /* 1590 */ unk32 mUnk_1590;
+    /* 1594 */ unk32 mUnk_1594;
+    /* 1598 */ unk32 mUnk_1598;
+    /* 159C */ unk32 mUnk_159C;
+    /* 15A0 */ unk32 mUnk_15A0;
+    /* 15A4 */ unk32 mUnk_15A4;
+    /* 15A8 */ unk32 mUnk_15A8;
+    /* 15AC */ unk32 mUnk_15AC;
+    /* 15B0 */ unk32 mUnk_15B0;
+    /* 15B4 */ unk32 mUnk_15B4;
+    /* 15B8 */ unk16 mUnk_15B8;
+    /* 15B8 */ unk16 mUnk_15BA;
+    /* 15BC */ unk32 mUnk_15BC;
+    /* 15C0 */ unk32 mUnk_15C0;
+    /* 15C4 */ unk32 mUnk_15C4;
+    /* 15C8 */ unk32 mUnk_15C8;
+    /* 15CC */ unk32 mUnk_15CC;
+    /* 15D0 */ unk32 mUnk_15D0;
+    /* 15D4 */ UnkSubStruct2 mUnk_15D4;
+    /* 1634 */ unk32 mUnk_1634;
+    /* 1638 */ unk32 mUnk_1638;
+    /* 163C */ unk32 mUnk_163C;
+    /* 1640 */ unk32 mUnk_1640;
+    /* 1644 */ unk32 mUnk_1644;
+    /* 1648 */ unk32 mUnk_1648;
+    /* 164C */ unk32 mUnk_164C;
+    /* 1650 */ unk32 mUnk_1650;
+    /* 1654 */ unk32 mUnk_1654;
+    /* 1658 */ unk32 mUnk_1658;
+    /* 165C */ unk32 mUnk_165C;
+    /* 1660 */ unk32 mUnk_1660;
+    /* 1664 */ unk32 mUnk_1664;
+    /* 1668 */ unk32 mUnk_1668;
+    /* 166C */ UnkSubStruct4 mUnk_166C;
+    /* 1670 */ unk32 mUnk_1670;
+    /* 1674 */ unk32 mUnk_1674;
+    /* 1678 */ unk32 mUnk_1678;
+    /* 167C */ unk32 mUnk_167C;
+    /* 1680 */ unk32 mUnk_1680;
+    /* 1684 */ unk32 mUnk_1684;
+    /* 1688 */ unk32 mUnk_1688;
+    /* 168C */ unk32 mUnk_168C;
+    /* 1690 */ unk32 mUnk_1690;
+    /* 1694 */ unk32 mUnk_1694;
+    /* 1698 */ unk32 mUnk_1698;
+    /* 169C */ unk32 mUnk_169C;
+    /* 16A0 */ unk32 mUnk_16A0;
+    /* 16A4 */ unk32 mUnk_16A4;
+    /* 16A8 */ unk32 mUnk_16A8;
+    /* 16AC */ unk32 mUnk_16AC;
+    /* 16B0 */ unk32 mUnk_16B0;
+    /* 16B4 */ unk32 mUnk_16B4;
+    /* 16B8 */ unk32 mUnk_16B8;
+    /* 16BC */ unk32 mUnk_16BC;
+    /* 16C0 */ unk32 mUnk_16C0;
+    /* 16C4 */ unk32 mUnk_16C4;
+    /* 16C8 */ unk32 mUnk_16C8;
+    /* 16CC */ unk32 mUnk_16CC;
+    /* 16D0 */ unk32 mUnk_16D0;
+    /* 16D4 */ unk32 mUnk_16D4;
+    /* 16D8 */ unk32 mUnk_16D8;
+    /* 16DC */ unk32 mUnk_16DC;
+    /* 16E0 */ unk32 mUnk_16E0;
+    /* 16E4 */ unk32 mUnk_16E4;
+    /* 16E8 */ unk32 mUnk_16E8;
+    /* 16EC */ unk32 mUnk_16EC;
+    /* 16F0 */ unk32 mUnk_16F0;
+    /* 16F4 */ unk32 mUnk_16F4;
+    /* 16F8 */ unk32 mUnk_16F8;
+    /* 16FC */ unk32 mUnk_16FC;
+    /* 1700 */ unk32 mUnk_1700;
+    /* 1704 */ unk32 mUnk_1704;
+    /* 1708 */ unk32 mUnk_1708;
+    /* 170C */ unk32 mUnk_170C;
+    /* 1710 */ unk32 mUnk_1710;
+    /* 1714 */ unk32 mUnk_1714;
+    /* 1718 */ unk32 mUnk_1718;
+    /* 171C */ unk32 mUnk_171C;
+    /* 1720 */ unk32 mUnk_1720;
+    /* 1724 */ unk32 mUnk_1724;
+    /* 1728 */ unk32 mUnk_1728;
+    /* 172C */ unk32 mUnk_172C;
+    /* 1730 */ unk32 mUnk_1730;
+    /* 1734 */ unk32 mUnk_1734;
+    /* 1738 */ unk32 mUnk_1738;
+    /* 173C */ unk32 mUnk_173C;
+    /* 1740 */ unk32 mUnk_1740;
+    /* 1744 */ unk32 mUnk_1744;
+    /* 1748 */ unk32 mUnk_1748;
+    /* 174C */ unk32 mUnk_174C;
+    /* 1750 */ unk32 mUnk_1750;
+    /* 1754 */ unk32 mUnk_1754;
+    /* 1758 */ unk32 mUnk_1758;
+    /* 175C */ unk32 mUnk_175C;
+    /* 1760 */ unk32 mUnk_1760;
+    /* 1764 */ unk32 mUnk_1764;
+    /* 1768 */ unk32 mUnk_1768;
+    /* 176C */ unk32 mUnk_176C;
+    /* 1770 */ unk32 mUnk_1770;
+    /* 1774 */ unk32 mUnk_1774;
+    /* 1778 */ unk32 mUnk_1778;
+    /* 177C */ unk32 mUnk_177C;
+    /* 1780 */ unk32 mUnk_1780;
+    /* 1784 */ unk32 mUnk_1784;
+    /* 1788 */ unk32 mUnk_1788;
+    /* 178C */ unk32 mUnk_178C;
+    /* 1790 */ unk32 mUnk_1790;
+    /* 1794 */ unk32 mUnk_1794;
+    /* 1798 */ unk32 mUnk_1798;
+    /* 179C */ unk32 mUnk_179C;
+    /* 17A0 */ unk32 mUnk_17A0;
+    /* 17A4 */ unk32 mUnk_17A4;
+    /* 17A8 */ unk32 mUnk_17A8;
+    /* 17AC */ unk32 mUnk_17AC;
+    /* 17B0 */ unk32 mUnk_17B0;
+    /* 17B4 */ unk32 mUnk_17B4;
+    /* 17B8 */ unk32 mUnk_17B8;
+    /* 17BC */ unk32 mUnk_17BC;
+    /* 17C0 */ unk32 mUnk_17C0;
+    /* 17C4 */ unk32 mUnk_17C4;
+    /* 17C8 */ unk32 mUnk_17C8;
+    /* 17CC */ unk32 mUnk_17CC;
+    /* 17D0 */ unk32 mUnk_17D0;
+    /* 17D4 */ unk32 mUnk_17D4;
+    /* 17D8 */ unk32 mUnk_17D8;
+    /* 17DC */ unk32 mUnk_17DC;
+    /* 17E0 */ unk32 mUnk_17E0;
+    /* 17E4 */ unk32 mUnk_17E4;
+    /* 17E8 */ unk32 mUnk_17E8;
+    /* 17EC */ unk32 mUnk_17EC;
+    /* 17F0 */ unk32 mUnk_17F0;
+    /* 17F4 */ unk32 mUnk_17F4;
+    /* 17F8 */ unk32 mUnk_17F8;
+    /* 17FC */ unk32 mUnk_17FC;
+    /* 1800 */ unk32 mUnk_1800;
+    /* 1804 */ unk32 mUnk_1804;
+    /* 1808 */ unk32 mUnk_1808;
+    /* 180C */ unk32 mUnk_180C;
+    /* 1810 */ unk32 mUnk_1810;
+    /* 1814 */ unk32 mUnk_1814;
+    /* 1818 */ unk32 mUnk_1818;
+    /* 181C */ unk32 mUnk_181C;
+    /* 1820 */ unk32 mUnk_1820;
+    /* 1824 */ unk32 mUnk_1824;
+    /* 1828 */ unk32 mUnk_1828;
+    /* 182C */ unk32 mUnk_182C;
+    /* 1830 */ unk32 mUnk_1830;
+    /* 1834 */ unk32 mUnk_1834;
+    /* 1838 */ unk32 mUnk_1838;
+    /* 183C */ unk32 mUnk_183C;
+    /* 1840 */ unk32 mUnk_1840;
+    /* 1844 */ unk32 mUnk_1844;
+    /* 1848 */ unk32 mUnk_1848;
+    /* 184C */ unk32 mUnk_184C;
+    /* 1850 */ unk32 mUnk_1850;
+    /* 1854 */ unk32 mUnk_1854;
+    /* 1858 */ unk32 mUnk_1858;
+    /* 185C */ unk32 mUnk_185C;
+    /* 1860 */ unk32 mUnk_1860;
+    /* 1864 */ unk32 mUnk_1864;
+    /* 1868 */ unk32 mUnk_1868;
+    /* 186C */ unk32 mUnk_186C;
+    /* 1870 */ unk32 mUnk_1870;
+    /* 1874 */ unk32 mUnk_1874;
+    /* 1878 */ unk32 mUnk_1878;
+    /* 187C */ unk32 mUnk_187C;
+    /* 1880 */ unk32 mUnk_1880;
+    /* 1884 */ unk32 mUnk_1884;
+    /* 1888 */ unk32 mUnk_1888;
+    /* 188C */ unk32 mUnk_188C;
+    /* 1890 */ unk32 mUnk_1890;
+    /* 1894 */ unk32 mUnk_1894;
+    /* 1898 */ unk32 mUnk_1898;
+    /* 189C */ unk32 mUnk_189C;
+    /* 18A0 */ unk32 mUnk_18A0;
+    /* 18A4 */ unk32 mUnk_18A4;
+
+    /* 18A8 */ UnkSubStruct3 mUnk_18A8;
+    /* 18EC */ UnkSubStruct2 mUnk_18EC;
+    /* 194C */ unk32 mUnk_194C;
+    /* 1950 */ unk32 mUnk_1950;
+    /* 1954 */ unk32 mUnk_1954;
+    /* 1958 */ unk32 mUnk_1958;
+    /* 195C */ unk32 mUnk_195C;
+    /* 1960 */ unk32 mUnk_1960;
+    /* 1964 */ unk32 mUnk_1964;
+    /* 1968 */ unk32 mUnk_1968;
+    /* 196C */ unk32 mUnk_196C;
+    /* 1970 */ unk32 mUnk_1970;
+    /* 1974 */ unk32 mUnk_1974;
+    /* 1978 */ unk32 mUnk_1978;
+    /* 197C */ unk32 mUnk_197C;
+    /* 1980 */ unk32 mUnk_1980;
+
+    /* 1984 */ UnkSubStruct4 mUnk_1984;
+    /* 1988 */ unk32 mUnk_1988;
+    /* 198C */ unk32 mUnk_198C;
+    /* 1990 */ unk32 mUnk_1990;
+    /* 1994 */ unk32 mUnk_1994;
+    /* 1998 */ unk32 mUnk_1998;
+    /* 199C */ unk32 mUnk_199C;
+    /* 19A0 */ unk32 mUnk_19A0;
+    /* 19A4 */ unk32 mUnk_19A4;
+    /* 19A8 */ unk32 mUnk_19A8;
+    /* 19AC */ unk32 mUnk_19AC;
+    /* 19B0 */ unk32 mUnk_19B0;
+    /* 19B4 */ unk32 mUnk_19B4;
+    /* 19B8 */ unk32 mUnk_19B8;
+    /* 19BC */ unk32 mUnk_19BC;
+    /* 19C0 */ unk32 mUnk_19C0;
+    /* 19C4 */ unk32 mUnk_19C4;
+    /* 19C8 */ unk32 mUnk_19C8;
+    /* 19CC */ unk32 mUnk_19CC;
+    /* 19D0 */ unk32 mUnk_19D0;
+    /* 19D4 */ unk32 mUnk_19D4;
+    /* 19D8 */ unk32 mUnk_19D8;
+    /* 19DC */ unk32 mUnk_19DC;
+    /* 19E0 */ unk32 mUnk_19E0;
+    /* 19E4 */ unk32 mUnk_19E4;
+    /* 19E8 */ unk32 mUnk_19E8;
+    /* 19EC */ unk32 mUnk_19EC;
+    /* 19F0 */ unk32 mUnk_19F0;
+    /* 19F4 */ unk32 mUnk_19F4;
+    /* 19F8 */ unk32 mUnk_19F8;
+    /* 19FC */ unk32 mUnk_19FC;
+    /* 1A00 */ unk32 mUnk_1A00;
+    /* 1A04 */ unk32 mUnk_1A04;
+    /* 1A08 */ unk32 mUnk_1A08;
+    /* 1A0C */ unk32 mUnk_1A0C;
+    /* 1A10 */ unk32 mUnk_1A10;
+    /* 1A14 */ unk32 mUnk_1A14;
+    /* 1A18 */ unk32 mUnk_1A18;
+    /* 1A1C */ unk32 mUnk_1A1C;
+    /* 1A20 */ unk32 mUnk_1A20;
+    /* 1A24 */ unk32 mUnk_1A24;
+    /* 1A28 */ unk32 mUnk_1A28;
+    /* 1A2C */ unk32 mUnk_1A2C;
+    /* 1A30 */ unk32 mUnk_1A30;
+    /* 1A34 */ unk32 mUnk_1A34;
+    /* 1A38 */ unk32 mUnk_1A38;
+    /* 1A3C */ unk32 mUnk_1A3C;
+    /* 1A40 */ unk32 mUnk_1A40;
+    /* 1A44 */ unk32 mUnk_1A44;
+    /* 1A48 */ unk32 mUnk_1A48;
+    /* 1A4C */ unk32 mUnk_1A4C;
+    /* 1A50 */ unk32 mUnk_1A50;
+    /* 1A54 */ unk32 mUnk_1A54;
+    /* 1A58 */ unk32 mUnk_1A58;
+    /* 1A5C */ unk32 mUnk_1A5C;
+    /* 1A60 */ unk32 mUnk_1A60;
+    /* 1A64 */ unk32 mUnk_1A64;
+    /* 1A68 */ unk32 mUnk_1A68;
+    /* 1A6C */ unk32 mUnk_1A6C;
+    /* 1A70 */ unk32 mUnk_1A70;
+    /* 1A74 */ unk32 mUnk_1A74;
+    /* 1A78 */ unk32 mUnk_1A78;
+    /* 1A7C */ unk32 mUnk_1A7C;
+    /* 1A80 */ unk32 mUnk_1A80;
+    /* 1A84 */ unk32 mUnk_1A84;
+    /* 1A88 */ unk32 mUnk_1A88;
+    /* 1A8C */ unk32 mUnk_1A8C;
+    /* 1A90 */ unk32 mUnk_1A90;
+    /* 1A94 */ unk32 mUnk_1A94;
+    /* 1A98 */ unk32 mUnk_1A98;
+    /* 1A9C */ unk32 mUnk_1A9C;
+    /* 1AA0 */ unk32 mUnk_1AA0;
+    /* 1AA4 */ unk32 mUnk_1AA4;
+    /* 1AA8 */ unk32 mUnk_1AA8;
+    /* 1AAC */ unk32 mUnk_1AAC;
+    /* 1AB0 */ unk32 mUnk_1AB0;
+    /* 1AB4 */ unk32 mUnk_1AB4;
+    /* 1AB8 */ unk32 mUnk_1AB8;
+    /* 1ABC */ unk32 mUnk_1ABC;
+    /* 1AC0 */ unk32 mUnk_1AC0;
+    /* 1AC4 */ unk32 mUnk_1AC4;
+    /* 1AC8 */ unk32 mUnk_1AC8;
+    /* 1ACC */ unk32 mUnk_1ACC;
+    /* 1AD0 */ unk32 mUnk_1AD0;
+    /* 1AD4 */ unk32 mUnk_1AD4;
+    /* 1AD8 */ unk32 mUnk_1AD8;
+    /* 1ADC */ unk32 mUnk_1ADC;
+    /* 1AE0 */ unk32 mUnk_1AE0;
+    /* 1AE4 */ unk32 mUnk_1AE4;
+    /* 1AE8 */ unk32 mUnk_1AE8;
+    /* 1AEC */ unk32 mUnk_1AEC;
+    /* 1AF0 */ unk32 mUnk_1AF0;
+    /* 1AF4 */ unk32 mUnk_1AF4;
+    /* 1AF8 */ unk32 mUnk_1AF8;
+    /* 1AFC */ unk32 mUnk_1AFC;
+    /* 1B00 */ unk32 mUnk_1B00;
+    /* 1B04 */ unk32 mUnk_1B04;
+    /* 1B08 */ unk32 mUnk_1B08;
+    /* 1B0C */ unk32 mUnk_1B0C;
+    /* 1B10 */ unk32 mUnk_1B10;
+    /* 1B14 */ unk32 mUnk_1B14;
+    /* 1B18 */ unk32 mUnk_1B18;
+    /* 1B1C */ unk32 mUnk_1B1C;
+    /* 1B20 */ unk32 mUnk_1B20;
+    /* 1B24 */ unk32 mUnk_1B24;
+    /* 1B28 */ unk32 mUnk_1B28;
+    /* 1B2C */ unk32 mUnk_1B2C;
+    /* 1B30 */ unk32 mUnk_1B30;
+    /* 1B34 */ unk32 mUnk_1B34;
+    /* 1B38 */ unk32 mUnk_1B38;
+    /* 1B3C */ unk32 mUnk_1B3C;
+    /* 1B40 */ unk32 mUnk_1B40;
+    /* 1B44 */ unk32 mUnk_1B44;
+    /* 1B48 */ unk32 mUnk_1B48;
+    /* 1B4C */ unk32 mUnk_1B4C;
+    /* 1B50 */ unk32 mUnk_1B50;
+    /* 1B54 */ unk32 mUnk_1B54;
+    /* 1B58 */ unk32 mUnk_1B58;
+    /* 1B5C */ unk32 mUnk_1B5C;
+    /* 1B60 */ unk32 mUnk_1B60;
+    /* 1B64 */ unk32 mUnk_1B64;
+    /* 1B68 */ unk32 mUnk_1B68;
+    /* 1B6C */ unk32 mUnk_1B6C;
+    /* 1B70 */ unk32 mUnk_1B70;
+    /* 1B74 */ unk32 mUnk_1B74;
+    /* 1B78 */ unk32 mUnk_1B78;
+    /* 1B7C */ unk32 mUnk_1B7C;
+    /* 1B80 */ unk32 mUnk_1B80;
+    /* 1B84 */ unk32 mUnk_1B84;
+    /* 1B88 */ unk32 mUnk_1B88;
+    /* 1B8C */ unk32 mUnk_1B8C;
+    /* 1B90 */ unk32 mUnk_1B90;
+    /* 1B94 */ unk32 mUnk_1B94;
+    /* 1B98 */ unk32 mUnk_1B98;
+    /* 1B9C */ unk32 mUnk_1B9C;
+    /* 1BA0 */ unk32 mUnk_1BA0;
+    /* 1BA4 */ unk32 mUnk_1BA4;
+    /* 1BA8 */ unk32 mUnk_1BA8;
+    /* 1BAC */ unk32 mUnk_1BAC;
+    /* 1BB0 */ unk32 mUnk_1BB0;
+    /* 1BB4 */ unk32 mUnk_1BB4;
+    /* 1BB8 */ unk32 mUnk_1BB8;
+    /* 1BBC */ unk32 mUnk_1BBC;
+
+    /* 1BC0 */ UnkSubStruct3 mUnk_1BC0;
+    /* 1C04 */ UnkSystem1_ov019_3 mUnk_1C04;
+    /* 1C08 */ unk32 mUnk_1C08;
+    /* 1C0C */ unk32 mUnk_1C0C;
+    /* 1C10 */ unk32 mUnk_1C10;
+    /* 1C14 */ unk32 mUnk_1C14;
+    /* 1C18 */ unk32 mUnk_1C18;
+    /* 1C1C */ unk32 mUnk_1C1C;
+    /* 1C20 */ unk32 mUnk_1C20;
+    /* 1C24 */ unk32 mUnk_1C24;
+    /* 1C26 */ unk16 mUnk_1C26; // could be part of UnkSystem1_ov019_3
+    /* 1C28 */
+
+    FileSelect_UnkClass2_Sub3();
+    void func_ov019_020c61dc();
+    void func_ov019_020c63dc();
+    void func_ov019_020c6c14();
+    void func_ov019_020c6c18();
+    void func_ov019_020c6c54();
+    void func_ov019_020c6c9c();
+    void func_ov019_020c6ca0();
+    void func_ov019_020c6cd0();
+    void func_ov019_020c6d08();
+    void func_ov019_020c6d0c();
+    void func_ov019_020c6d10();
+
+    /* 00 */ virtual ~FileSelect_UnkClass2_Sub3();
+    /* 08 */ virtual void vfunc_08();
+    /* 10 */ virtual void vfunc_10();
+    /* 18 */ virtual void vfunc_18(void);
+};
+
+class FileSelect_UnkClass2_Sub4 : public SysObject {
+public:
+    /* 0000 (vtable) */
+    /* 0004 */ unk8 mUnk_04[0x101C];
+    /* 1020 */
+
+    FileSelect_UnkClass2_Sub4();
+
+    /* 00 */ virtual ~FileSelect_UnkClass2_Sub4();
+    /* 08 */ virtual void vfunc_08();
+    /* 0C */ virtual void vfunc_0C();
+    /* 10 */ virtual void vfunc_10();
+    /* 14 */ virtual void vfunc_14();
+    /* 18 */ virtual void vfunc_18(void);
+};
+
+class FileSelect_UnkClass2_Sub7 : public SysObject {
+public:
+    /* 00 */ unk32 mUnk_00; // vtable?
+    /* 04 */ FileSelect_UnkClass2_Sub8 mUnk_04;
+};
+
+class FileSelect_UnkClass2_Sub5 : public SysObject {
+public:
+    /* 00 (vtable) */
+    /* 04 */ unk8 mUnk_04[0x1C];
+    /* 20 */
+
+    FileSelect_UnkClass2_Sub5(FileSelect_UnkClass2_Sub7 *param1, FileSelect_UnkClass2_Sub3 *param2);
+
+    virtual ~FileSelect_UnkClass2_Sub5();
+};
+
+class FileSelect_UnkClass2_Sub6 : public SysObject {
+public:
+    /* 00 (vtable) */
+    /* 04 */ unk8 mUnk_04[0x18];
+    /* 1C */
+
+    FileSelect_UnkClass2_Sub6(FileSelect_UnkClass2_Sub7 *param1, FileSelect_UnkClass2_Sub3 *param2);
+
+    virtual ~FileSelect_UnkClass2_Sub6();
+};
+#include "Unknown/UnkStruct_ov000_02067bc4.hpp"
+extern "C" void func_ov000_0206807c(void *, unk32 param1, void *param2);
+class FileSelect_UnkStruct2 : public FileSelect_UnkClass2_Sub2 {
+public:
+    /* 000 (vtable) */
+    /* 004 */ FileSelect_UnkClass2_Sub1 mUnk_004;
+    /* 008 */ unk8 mUnk_008[0x104 - 0x008];
+    /* 104 */ FileSelect_UnkClass2_Sub7 mUnk_104;
+    /* 10C */ unk8 mUnk_10C[0x130 - 0x10C];
+    /* 130 */ unk8 mUnk_130;
+    /* 131 */ unk8 mUnk_131;
+    /* 132 */ u8 mUnk_132; // bool?
+    /* 133 */ unk8 mUnk_133;
+    /* 134 */ unk32 mUnk_134;
+    /* 138 */ unk32 mUnk_138;
+    /* 13C */ unk32 mUnk_13C;
+    /* 140 */ unk32 mUnk_140;
+    /* 144 */ unk32 mUnk_144;
+    /* 148 */ unk32 mUnk_148;
+    /* 14C */ unk32 mUnk_14C;
+    /* 150 */ unk32 mUnk_150;
+    /* 154 */ FileSelect_UnkClass2_Sub7 *mUnk_154;
+    /* 158 */ FileSelect_UnkClass2_Sub3 *mUnk_158;
+    /* 15C */ FileSelect_UnkClass2_Sub4 *mUnk_15C;
+    /* 160 */ FileSelect_UnkClass2_Sub5 *mUnk_160;
+    /* 164 */ FileSelect_UnkClass2_Sub6 *mUnk_164;
+    /* 168 */ UnkSystem1_ov019_1 mUnk_168;
+    /* 16C */ unk32 mUnk_16C;
+    /* 170 */ unk32 mUnk_170;
+    /* 174 */ unk32 mUnk_174;
+    /* 178 */ unk8 mUnk_178;
+    /* 179 */ unk8 mUnk_179;
+    /* 17A */ unk8 mUnk_17A;
+    /* 17B */ unk8 mUnk_17B;
+    /* 17C */ u8 mUnk_17C; // bool?
+    /* 17C */ unk8 mUnk_17D;
+    /* 17C */ unk8 mUnk_17E;
+    /* 17C */ unk8 mUnk_17F;
+    /* 180 */
+
+    void test(unk32 param1, void *data, void *param2, unk8 param3) {
+        this->mUnk_17A = param3;
+        // data_ov000_020b504c.func_ov000_0206807c(param1, param2);
+        func_ov000_0206807c(data, param1, param2);
+    }
+
+    FileSelect_UnkStruct2(unk32 param1);
+    void func_0201875c(void);
+    void func_02018908(void);
+    void func_02018a14(unk32 param2);
+    void func_02018830(unk32 param2);
+    void func_ov019_020c4ed8(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov019_020c4ff8();
+    void func_ov019_020c5038();
+    void func_ov019_020c503c();
+    void func_ov019_020c5168(unk32 param1);
+    void func_ov019_020c5188(unk32 param1);
+    void func_ov019_020c51a8();
+
+    virtual ~FileSelect_UnkStruct2();
+
+    static FileSelect_UnkStruct2 *Create(unk32 param1);
+};
+
+class FileSelect : public SysObject {
+public:
+    static FileSelect *Create();
+
+    FileSelect();
+
+    //! TODO: not everything belong to this class
+    static void func_ov019_020c4b7c();
+    void func_ov019_020c4ba8();
+    void func_ov019_020c4c38();
+    void func_ov019_020c4c4c();
+    void func_ov019_020c4d14();
+    void func_ov019_020c4de4();
+
+    void func_ov019_020c51ec();
+
+    // void func_ov019_020c5200();
+    void func_ov019_020c523c();
+    void func_ov019_020c5284();
+    void func_ov019_020c5430();
+
+    void func_ov019_020c5614();
+    void func_ov019_020c5630();
+    void func_ov019_020c5fd0();
+    void func_ov019_020c5fe4();
+
+    void func_ov019_020c6d48();
+    void func_ov019_020c6e14();
+    void func_ov019_020c6e3c();
+    void func_ov019_020c7000();
+    void func_ov019_020c717c();
+    void func_ov019_020c71d0();
+    void func_ov019_020c71f0();
+    void func_ov019_020c7210();
+    void func_ov019_020c7274();
+    void func_ov019_020c72a0();
+    void func_ov019_020c757c();
+    void func_ov019_020c7768();
+    void func_ov019_020c77b8();
+    void func_ov019_020c7804();
+    void func_ov019_020c7858();
+    void func_ov019_020c7878();
+    void func_ov019_020c78ac();
+    void func_ov019_020c7910();
+    void func_ov019_020c7a44();
+    void func_ov019_020c7c3c();
+    void func_ov019_020c7c48();
+    void func_ov019_020c7c70();
+    void func_ov019_020c7d3c();
+    void func_ov019_020c7dc8();
+    void func_ov019_020c80dc();
+    void func_ov019_020c80e8();
+    void func_ov019_020c80f4();
+    void func_ov019_020c80f8();
+    void func_ov019_020c8290();
+    void func_ov019_020c82c4();
+    void func_ov019_020c8454();
+    void func_ov019_020c8524();
+    void func_ov019_020c854c();
+    void func_ov019_020c8aac();
+    void func_ov019_020c8ad8();
+    void func_ov019_020c8b10();
+    void func_ov019_020c8b48();
+    void func_ov019_020c8b74();
+    void func_ov019_020c8c4c();
+    void func_ov019_020c92dc();
+    void func_ov019_020c9b28();
+    void func_ov019_020c9b70();
+    void func_ov019_020c9bcc();
+    void func_ov019_020c9c18();
+    void func_ov019_020c9c70();
+    void func_ov019_020c9d88();
+    void func_ov019_020c9e08();
+    void func_ov019_020ca6a4();
+    void func_ov019_020ca80c();
+    void func_ov019_020ca844();
+    void func_ov019_020ca87c();
+    void func_ov019_020ca8b4();
+    void func_ov019_020ca940();
+    void func_ov019_020cb180();
+    void func_ov019_020cb1dc();
+    void func_ov019_020cb238();
+    void func_ov019_020cb268();
+    void func_ov019_020cb26c();
+    void func_ov019_020cb270();
+    void func_ov019_020cb2a8();
+    void func_ov019_020cb2dc();
+    void func_ov019_020cb324();
+    void func_ov019_020cb4bc();
+    void func_ov019_020cb4c8();
+    void func_ov019_020cb4d4();
+    void func_ov019_020cb4e0();
+    void func_ov019_020cb4ec();
+    void func_ov019_020cb4f8();
+    void func_ov019_020cb504();
+    void func_ov019_020cb510();
+    void func_ov019_020cb51c();
+    void func_ov019_020cb528();
+    void func_ov019_020cb534();
+    void func_ov019_020cb540();
+    void func_ov019_020cb54c();
+    void func_ov019_020cb558();
+    void func_ov019_020cb564();
+    void func_ov019_020cb570();
+    void func_ov019_020cb57c();
+    void func_ov019_020cb588();
+    void func_ov019_020cb5b0();
+    void func_ov019_020cb5bc();
+    void func_ov019_020cb5c8();
+    void func_ov019_020cb5d8();
+    void func_ov019_020cb5dc();
+    void func_ov019_020cb664();
+    void func_ov019_020cb6e8();
+    void func_ov019_020cb718();
+    void func_ov019_020cb748();
+    void func_ov019_020cb768();
+    void func_ov019_020cbaec();
+    void func_ov019_020cbb10();
+    void func_ov019_020cbb40();
+    void func_ov019_020cbb94();
+    void func_ov019_020cbc0c();
+    void func_ov019_020cc5ac();
+    void func_ov019_020cc5c0();
+    void func_ov019_020cc5f4();
+    void func_ov019_020cc6ac();
+    void func_ov019_020cc718();
+    void func_ov019_020cc78c();
+    void func_ov019_020cc85c();
+    void func_ov019_020cc874();
+    void func_ov019_020cc880();
+    void func_ov019_020ccb18();
+    void func_ov019_020ccc28();
+    void func_ov019_020ccd40();
+    void func_ov019_020ccd78();
+    void func_ov019_020ccdb0();
+    void func_ov019_020ccdf4();
+    void func_ov019_020cce04();
+    void func_ov019_020cce30();
+    void func_ov019_020cd16c();
+    void func_ov019_020cd41c();
+    void func_ov019_020cd5f8();
+    void func_ov019_020cd614();
+    void func_ov019_020cd788();
+    void func_ov019_020cd7f8();
+    void func_ov019_020cd8d4();
+    void func_ov019_020cdbdc();
+    void func_ov019_020cdc0c();
+    void func_ov019_020cdc38();
+    void func_ov019_020cdc5c();
+    void func_ov019_020cdc60();
+    void func_ov019_020cdc8c();
+    void func_ov019_020cdcb8();
+    void func_ov019_020cde8c();
+    void func_ov019_020cde9c();
+    void func_ov019_020cdeac();
+    void func_ov019_020ce314();
+    void func_ov019_020ce414();
+    void func_ov019_020ce4dc();
+    void func_ov019_020ce61c();
+    void func_ov019_020ce668();
+    void func_ov019_020ce6c8();
+    void func_ov019_020ce704();
+    void func_ov019_020ce74c();
+    void func_ov019_020ce7a0();
+    void func_ov019_020ce7d4();
+    void func_ov019_020ce820();
+    void func_ov019_020ce830();
+    void func_ov019_020ce844();
+    void func_ov019_020ce9a4();
+    void func_ov019_020cea04();
+    void func_ov019_020cea6c();
+    void func_ov019_020cea70();
+    void func_ov019_020cea74();
+    void func_ov019_020ceaac();
+    void func_ov019_020cebcc();
+    void func_ov019_020cec64();
+    void func_ov019_020cef04();
+    void func_ov019_020cef6c();
+    void func_ov019_020cefe4();
+    void func_ov019_020ceff8();
+    void func_ov019_020cf00c();
+    void func_ov019_020cf130();
+    void func_ov019_020cf168();
+    void func_ov019_020cf21c();
+    void func_ov019_020cf28c();
+    void func_ov019_020cf5e8();
+    void func_ov019_020cf73c();
+    void func_ov019_020cf85c();
+    void func_ov019_020cf870();
+    void func_ov019_020cf9fc();
+    void func_ov019_020cfad0();
+    void func_ov019_020cfb28();
+    void func_ov019_020cfc14();
+    void func_ov019_020cfc68();
+    void func_ov019_020cfc7c();
+    void func_ov019_020cfc98();
+    void func_ov019_020cfce8();
+    void func_ov019_020cfd4c();
+    void func_ov019_020cfd50();
+    void func_ov019_020cfddc();
+    void func_ov019_020cfdec();
+    void func_ov019_020cfe50();
+    void func_ov019_020cfefc();
+    void func_ov019_020cff30();
+    void func_ov019_020cff7c();
+    void func_ov019_020cffb8();
+    void func_ov019_020cfffc();
+    void func_ov019_020d004c();
+    void func_ov019_020d00dc();
+    void func_ov019_020d00e0();
+    void func_ov019_020d0188();
+    void func_ov019_020d01c0();
+    void func_ov019_020d0264();
+    void func_ov019_020d02f4();
+
+    void func_ov019_020d035c();
+    void func_ov019_020d03a4();
+    void func_ov019_020d0594();
+    void func_ov019_020d05b0();
+    void func_ov019_020d05fc();
+    void func_ov019_020d0610();
+    void func_ov019_020d0658();
+    void func_ov019_020d0850();
+    void func_ov019_020d086c();
+
+    void func_ov019_020d0964();
+    void func_ov019_020d09dc();
+    void func_ov019_020d0a04();
+    void func_ov019_020d0a2c();
+    void func_ov019_020d0ae0();
+    void func_ov019_020d0b04();
+
+    void func_ov019_020d0d50();
+    void func_ov019_020d0e18();
+    void func_ov019_020d0ea8();
+    void func_ov019_020d1108();
+    void func_ov019_020d127c();
+    void func_ov019_020d13b8();
+    void func_ov019_020d1400();
+    void func_ov019_020d1434();
+    void func_ov019_020d14c0();
+    void func_ov019_020d14fc();
+    void func_ov019_020d1538();
+    void func_ov019_020d15cc();
+    void func_ov019_020d1600();
+    void func_ov019_020d1634();
+    void func_ov019_020d16d0();
+    void func_ov019_020d17e0();
+    void func_ov019_020d1808();
+    void func_ov019_020d1aac();
+    void func_ov019_020d1b14();
+};
